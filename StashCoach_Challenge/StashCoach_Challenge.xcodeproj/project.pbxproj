@@ -11,9 +11,9 @@
 		EA48EDC3242069FA004494BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDC2242069FA004494BF /* SceneDelegate.swift */; };
 		EA48EDC5242069FA004494BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDC4242069FA004494BF /* ViewController.swift */; };
 		EA48EDC8242069FA004494BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDC6242069FA004494BF /* Main.storyboard */; };
-		EA48EDCB242069FA004494BF /* StashCoach_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDC9242069FA004494BF /* StashCoach_Challenge.xcdatamodeld */; };
 		EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDCC242069FB004494BF /* Assets.xcassets */; };
 		EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDCE242069FB004494BF /* LaunchScreen.storyboard */; };
+		EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		EA48EDC2242069FA004494BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EA48EDC4242069FA004494BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA48EDC7242069FA004494BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA48EDCA242069FA004494BF /* StashCoach_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StashCoach_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		EA48EDCC242069FB004494BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA48EDCF242069FB004494BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA48EDD1242069FB004494BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				EA48EDCC242069FB004494BF /* Assets.xcassets */,
 				EA48EDCE242069FB004494BF /* LaunchScreen.storyboard */,
 				EA48EDD1242069FB004494BF /* Info.plist */,
-				EA48EDC9242069FA004494BF /* StashCoach_Challenge.xcdatamodeld */,
+				EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */,
 			);
 			path = StashCoach_Challenge;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA48EDCB242069FA004494BF /* StashCoach_Challenge.xcdatamodeld in Sources */,
 				EA48EDC5242069FA004494BF /* ViewController.swift in Sources */,
 				EA48EDC1242069FA004494BF /* AppDelegate.swift in Sources */,
 				EA48EDC3242069FA004494BF /* SceneDelegate.swift in Sources */,
+				EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +340,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EA48EDC9242069FA004494BF /* StashCoach_Challenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EA48EDCA242069FA004494BF /* StashCoach_Challenge.xcdatamodel */,
-			);
-			currentVersion = EA48EDCA242069FA004494BF /* StashCoach_Challenge.xcdatamodel */;
-			path = StashCoach_Challenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EA48EDB5242069FA004494BF /* Project object */;
 }

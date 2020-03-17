@@ -8,8 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    
+    
+
+    @IBAction func beginButton(_ sender: Any) {
+        
+        
+        let collectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
+        self.navigationController?.pushViewController(collectionVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
