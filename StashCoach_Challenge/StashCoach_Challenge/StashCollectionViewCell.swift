@@ -16,6 +16,14 @@ class StashCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.getImage { data in
+            self.imageView.image = UIImage(data: data)
+        }
+    }
+    
+    override func prepareForReuse() {
+        imageView.image = nil //clears image away but imageView doesn't fuck up cellsize
     }
     
     

@@ -44,15 +44,14 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
-        cell.backgroundColor = .red
-//
-        cell.getImage { data in
-            cell.imageView.image = UIImage(data: data)
-        }
-//
-//        cell.imageView.image =
-        // Configure the cell
         
+        cell.imageView.backgroundColor = .blue
+
+//        cell.getImage { data in
+//            cell.imageView.image = UIImage(data: data)
+//        }
+//
+      
     
         return cell
     }
@@ -70,6 +69,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         
         return CGSize(width: availableWidth, height: availableWidth)
+        
+//        return self.collectionView.frame.size
       }
       
       //3

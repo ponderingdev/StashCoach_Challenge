@@ -62,10 +62,14 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="4yM-Wa-cQS"/>
                                         <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="LMO-6n-JIQ"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="R2L-jW-sjD"/>
+                                        <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="YDm-Oa-VZn"/>
                                         <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="igE-Bu-ZAb"/>
+                                        <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="mbt-Rr-cJL"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="v2g-Ux-mB3"/>
+                                        <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="zCF-U3-BRd"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="218" height="197"/>
