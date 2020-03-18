@@ -14,6 +14,8 @@
 		EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDCC242069FB004494BF /* Assets.xcassets */; };
 		EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDCE242069FB004494BF /* LaunchScreen.storyboard */; };
 		EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */; };
+		EA48EDDB24225EAB004494BF /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDD924225EAB004494BF /* CustomCollectionViewCell.swift */; };
+		EA48EDDC24225EAB004494BF /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDDA24225EAB004494BF /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EA48EDCF242069FB004494BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA48EDD1242069FB004494BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachCollectionViewController.swift; sourceTree = "<group>"; };
+		EA48EDD924225EAB004494BF /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA48EDDA24225EAB004494BF /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				EA48EDCE242069FB004494BF /* LaunchScreen.storyboard */,
 				EA48EDD1242069FB004494BF /* Info.plist */,
 				EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */,
+				EA48EDD924225EAB004494BF /* CustomCollectionViewCell.swift */,
+				EA48EDDA24225EAB004494BF /* CustomCollectionViewCell.xib */,
 			);
 			path = StashCoach_Challenge;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 				EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */,
 				EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */,
 				EA48EDC8242069FA004494BF /* Main.storyboard in Resources */,
+				EA48EDDC24225EAB004494BF /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA48EDC5242069FA004494BF /* ViewController.swift in Sources */,
+				EA48EDDB24225EAB004494BF /* CustomCollectionViewCell.swift in Sources */,
 				EA48EDC1242069FA004494BF /* AppDelegate.swift in Sources */,
 				EA48EDC3242069FA004494BF /* SceneDelegate.swift in Sources */,
 				EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */,
