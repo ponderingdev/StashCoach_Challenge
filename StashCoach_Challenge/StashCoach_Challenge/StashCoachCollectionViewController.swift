@@ -44,13 +44,17 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
+        cell.index = indexPath
+        
         
         cell.imageView.backgroundColor = .blue
 
-//        cell.getImage { data in
-//            cell.imageView.image = UIImage(data: data)
-//        }
-//
+//        print("cell index:\(cell.index) indexpath:\(indexPath)")
+        if cell.index == indexPath{
+            cell.getImage { data in
+                cell.imageView.image = UIImage(data: data)
+            }
+        }
       
     
         return cell

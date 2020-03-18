@@ -11,7 +11,7 @@ import UIKit
 class StashCollectionViewCell: UICollectionViewCell {
     
     
-    
+    var index : IndexPath!
     @IBOutlet var imageView: UIImageView!
     
     override func awakeFromNib() {
