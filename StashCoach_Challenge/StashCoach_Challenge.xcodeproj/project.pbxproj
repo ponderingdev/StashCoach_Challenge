@@ -15,6 +15,7 @@
 		EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA48EDCE242069FB004494BF /* LaunchScreen.storyboard */; };
 		EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */; };
 		EA48EDDE24227894004494BF /* StashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDDD24227894004494BF /* StashCollectionViewCell.swift */; };
+		EAB846522422C72600EEABE7 /* StashCoachProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB846512422C72600EEABE7 /* StashCoachProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA48EDD1242069FB004494BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachCollectionViewController.swift; sourceTree = "<group>"; };
 		EA48EDDD24227894004494BF /* StashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAB846512422C72600EEABE7 /* StashCoachProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		EAB8464C2422C60D00EEABE7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				EAB846512422C72600EEABE7 /* StashCoachProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB846522422C72600EEABE7 /* StashCoachProtocols.swift in Sources */,
 				EA48EDC5242069FA004494BF /* ViewController.swift in Sources */,
 				EA48EDC1242069FA004494BF /* AppDelegate.swift in Sources */,
 				EA48EDDE24227894004494BF /* StashCollectionViewCell.swift in Sources */,
