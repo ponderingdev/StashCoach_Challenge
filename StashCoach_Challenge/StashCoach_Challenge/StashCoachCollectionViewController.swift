@@ -13,7 +13,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    private let itemsPerRow: CGFloat = 1
+//    private let itemsPerRow: CGFloat = 1
 
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
         
         // Register cell classes
-        self.collectionView!.register(StashCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifer)
+//        self.collectionView!.register(StashCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifer)
 
         // Do any additional setup after loading the view.
     }
@@ -44,8 +44,15 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .red
+//
+//        cell.getImage { data in
+//            cell.imageView.image = UIImage(data: data)
+//        }
+//
+//        cell.imageView.image =
         // Configure the cell
+        
     
         return cell
     }
@@ -61,7 +68,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let availableWidth = view.frame.width - paddingSpace
 
         
-//        print(paddingSpace, availableWidth, widthPerItem)
         
         return CGSize(width: availableWidth, height: availableWidth)
       }
@@ -81,3 +87,5 @@ class StashCoachCollectionViewController: UICollectionViewController {
       }
         
     }
+
+
