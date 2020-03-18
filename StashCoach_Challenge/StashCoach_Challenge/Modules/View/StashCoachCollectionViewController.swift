@@ -74,7 +74,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         return CGSize(width: availableWidth, height: availableWidth)
         
-//        return self.collectionView.frame.size
       }
       
       //3
