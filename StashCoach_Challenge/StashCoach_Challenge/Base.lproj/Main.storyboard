@@ -43,20 +43,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bjg-7J-SXf">
-                            <size key="itemSize" width="218" height="165"/>
+                            <size key="itemSize" width="218" height="197"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StashCell" id="dH2-QP-R7L" customClass="CustomCollectionViewCell" customModule="StashCoach_Challenge" customModuleProvider="target">
-                                <rect key="frame" x="98" y="0.0" width="218" height="165"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StashCell" id="dH2-QP-R7L" customClass="StashCollectionViewCell" customModule="StashCoach_Challenge" customModuleProvider="target">
+                                <rect key="frame" x="98" y="0.0" width="218" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uRU-Nc-lhX">
-                                    <rect key="frame" x="0.0" y="0.0" width="218" height="165"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="218" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykW-rS-fG0">
+                                            <rect key="frame" x="0.0" y="0.0" width="218" height="197"/>
+                                            <color key="backgroundColor" red="0.75855616579999996" green="0.77167665159999999" blue="0.161566185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="LMO-6n-JIQ"/>
+                                        <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="R2L-jW-sjD"/>
+                                        <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="igE-Bu-ZAb"/>
+                                        <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="v2g-Ux-mB3"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="218" height="165"/>
+                                <size key="customSize" width="218" height="197"/>
+                                <connections>
+                                    <outlet property="image" destination="ykW-rS-fG0" id="8qt-eI-p7a"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
