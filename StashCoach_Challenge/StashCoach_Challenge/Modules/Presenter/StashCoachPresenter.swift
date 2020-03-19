@@ -17,16 +17,15 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
     var router: PresenterToRouterProtocol?
    
     func achievementsFetched() {
-        print("fun")
+        view?.displayCollectionView()
     }
     
     func achievementsFetchFailed() {
         print("fun")
     }
     
-    
     func updateView() {
-        print("fun")
+        interactor?.readJSON()
     }
     
     

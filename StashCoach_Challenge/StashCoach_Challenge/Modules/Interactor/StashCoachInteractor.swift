@@ -12,8 +12,7 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
 
     func readJSON() {
+        presenter?.achievementsFetched()
     }
-    
-    
 
 }
