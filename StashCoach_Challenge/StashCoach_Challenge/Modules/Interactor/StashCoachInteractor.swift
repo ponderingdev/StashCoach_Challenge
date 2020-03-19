@@ -12,8 +12,23 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
 
     
-    // uses the Entity to 
+    // uses the Entity to
     func readJSON() {
+        
+       
+        
+        guard let mainUrl = Bundle.main.url(forResource: "Achievements", withExtension: "json") else { return }
+        do{
+            
+        let jsonData = try Data(contentsOf: mainUrl)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let response = try decoder.decode(AchievementsResponse.self, from: jsonData)
+//        print(response)
+        } catch{
+            print("unable to turn to JSON")
+        }
+        
         presenter?.achievementsFetched()
     }
 

@@ -21,6 +21,7 @@
 		EAB8465A24230DF600EEABE7 /* StashCoachInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */; };
 		EAB8465D2423A15F00EEABE7 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */; };
 		EAB8465F2423A26700EEABE7 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */; };
+		EAB846622423A42200EEABE7 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = EAB846612423A42200EEABE7 /* achievements.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachInteractor.swift; sourceTree = "<group>"; };
 		EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsResponse.swift; sourceTree = "<group>"; };
+		EAB846612423A42200EEABE7 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = achievements.json; path = ../../../../../achievements.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		EA48EDBF242069FA004494BF /* StashCoach_Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				EAB846602423A33000EEABE7 /* Achievements_JSON */,
 				EAB8464B2422C5FA00EEABE7 /* Modules */,
 				EA48EDC0242069FA004494BF /* AppDelegate.swift */,
 				EA48EDC2242069FA004494BF /* SceneDelegate.swift */,
@@ -147,6 +150,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		EAB846602423A33000EEABE7 /* Achievements_JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EAB846612423A42200EEABE7 /* achievements.json */,
+			);
+			path = Achievements_JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */,
+				EAB846622423A42200EEABE7 /* achievements.json in Resources */,
 				EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */,
 				EA48EDC8242069FA004494BF /* Main.storyboard in Resources */,
 			);
