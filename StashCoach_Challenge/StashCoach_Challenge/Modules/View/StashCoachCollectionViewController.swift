@@ -12,7 +12,7 @@ import UIKit
 class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 1.0, right: 20.0)
     var presenter: ViewToPresenterProtocol?
     
     var achievements = [AchievementModel]()
@@ -70,32 +70,24 @@ class StashCoachCollectionViewController: UICollectionViewController {
 }
 
     extension StashCoachCollectionViewController : UICollectionViewDelegateFlowLayout {
-      //1
+      
       func collectionView(_ collectionView: UICollectionView,
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //2
+        
         let paddingSpace = sectionInsets.left * 10
         let availableWidth = view.frame.width - paddingSpace
-
-        
         
         return CGSize(width: availableWidth * 1.5, height: availableWidth)
         
       }
       
-      //3
+      
       func collectionView(_ collectionView: UICollectionView,
                           layout collectionViewLayout: UICollectionViewLayout,
                           insetForSectionAt section: Int) -> UIEdgeInsets {
+        
         return sectionInsets
-      }
-      
-      // 4
-      func collectionView(_ collectionView: UICollectionView,
-                          layout collectionViewLayout: UICollectionViewLayout,
-                          minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
       }
         
     }

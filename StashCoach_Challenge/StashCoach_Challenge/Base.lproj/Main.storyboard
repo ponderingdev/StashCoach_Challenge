@@ -88,6 +88,7 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="218" height="197"/>
                                 <connections>
+                                    <outlet property="circularView" destination="e39-9g-Ud3" id="12Z-Hf-iJ9"/>
                                     <outlet property="imageView" destination="ykW-rS-fG0" id="1U8-Uh-fh7"/>
                                 </connections>
                             </collectionViewCell>

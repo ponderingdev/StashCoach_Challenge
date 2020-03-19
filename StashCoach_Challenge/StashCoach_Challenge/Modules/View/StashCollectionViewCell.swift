@@ -11,15 +11,16 @@ import UIKit
 class StashCollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet var circularView: UIImageView!
     var index : IndexPath!
     @IBOutlet var imageView: UIImageView!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        self.getImage { data in
-//            self.imageView.image = UIImage(data: data)
-//        }
+        
     }
     
     override func prepareForReuse() {
