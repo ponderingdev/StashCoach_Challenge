@@ -22,14 +22,6 @@
       "accessible": false
     },
     {
-         "id": 3,
-         "level": "2",
-         "progress": 0,
-         "total": 50,
-         "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/341E40C8-1C2A-400C-B67D-F490B74BDD81.png",
-         "accessible": false
-       },
-    {
       "id": 5,
       "level": "3",
       "progress": 0,
