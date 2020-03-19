@@ -46,21 +46,20 @@ class StashCoachCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
-        cell.index = indexPath
         
         
-        cell.imageView.backgroundColor = .blue
+        cell.imageView.backgroundColor = .white
 
-        print("indexpath:\(indexPath.section)")
-        if cell.index == indexPath{
-//            cell.getImage { data in
-//                cell.imageView.image = UIImage(data: data)
-//            }
+//        print("indexpath:\(indexPath.section)")
+//        print("url:\(achievements[indexPath.section].bg_image_url)")
+        
+        
+//        if cell.index == indexPath{
             cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
             })
             
-        }
+//        }
       
     
         return cell
