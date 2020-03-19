@@ -9,5 +9,11 @@
 import UIKit
 
 struct AchievementModel: Codable {
-
+        let id: Int
+        let level: String
+        let progress: Int
+        let total: Int
+        let bg_image_url: String
+        let accessible: Bool
+    
 }

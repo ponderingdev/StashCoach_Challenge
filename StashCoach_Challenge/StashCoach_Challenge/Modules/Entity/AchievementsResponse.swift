@@ -11,15 +11,7 @@ import UIKit
 struct AchievementsResponse: Codable {
     let success: Bool
     let status: Int
-    
-    struct Achievement: Codable {
-        let id: Int
-        let level: String
-        let progress: Int
-        let total: Int
-        let bg_image_url: String
-        let accessible: Bool
-    }
+
     
     struct Overview: Codable {
         let title: String

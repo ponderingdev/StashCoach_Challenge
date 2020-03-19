@@ -11,12 +11,12 @@ import UIKit
 
 
 protocol PresenterToViewProtocol: class {
-    func displayCollectionView()
+    func displayCollectionView(_ title:String, _ data:[AchievementModel])
     func displayError()
 }
 
 protocol InteractorToPresenterProtocol : class{
-    func achievementsFetched()
+    func achievementsFetched(_ response:AchievementsResponse)
     func achievementsFetchFailed()
 }
 
