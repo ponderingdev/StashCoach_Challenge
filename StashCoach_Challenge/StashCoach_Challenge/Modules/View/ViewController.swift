@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = .white
 
+//        let infoButton = UIButton(type: .infoLight)
+//        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+//        navigationItem.rightBarButtonItem = infoBarButtonItem
+
     }
 
 

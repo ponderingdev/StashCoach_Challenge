@@ -23,7 +23,11 @@ class StashCoachCollectionViewController: UICollectionViewController {
         // Register cell classes
 //        self.collectionView!.register(StashCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifer)
 
-        // Do any additional setup after loading the view.
+       let infoButton = UIButton(type: .infoLight)
+        infoButton.tintColor = .white
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        navigationItem.rightBarButtonItem = infoBarButtonItem
+
     }
 
 
