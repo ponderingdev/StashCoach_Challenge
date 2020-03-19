@@ -16,6 +16,9 @@
 		EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */; };
 		EA48EDDE24227894004494BF /* StashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48EDDD24227894004494BF /* StashCollectionViewCell.swift */; };
 		EAB846522422C72600EEABE7 /* StashCoachProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB846512422C72600EEABE7 /* StashCoachProtocols.swift */; };
+		EAB8465624230D2F00EEABE7 /* StashCoachRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465524230D2F00EEABE7 /* StashCoachRouter.swift */; };
+		EAB8465824230DC500EEABE7 /* StashCoachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465724230DC500EEABE7 /* StashCoachPresenter.swift */; };
+		EAB8465A24230DF600EEABE7 /* StashCoachInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		EA48EDD724211943004494BF /* StashCoachCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachCollectionViewController.swift; sourceTree = "<group>"; };
 		EA48EDDD24227894004494BF /* StashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAB846512422C72600EEABE7 /* StashCoachProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachProtocols.swift; sourceTree = "<group>"; };
+		EAB8465524230D2F00EEABE7 /* StashCoachRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachRouter.swift; sourceTree = "<group>"; };
+		EAB8465724230DC500EEABE7 /* StashCoachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachPresenter.swift; sourceTree = "<group>"; };
+		EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		EAB8464D2422C61600EEABE7 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8465524230D2F00EEABE7 /* StashCoachRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		EAB8464E2422C62400EEABE7 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 		EAB8464F2422C63300EEABE7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8465724230DC500EEABE7 /* StashCoachPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -196,9 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB846522422C72600EEABE7 /* StashCoachProtocols.swift in Sources */,
+				EAB8465A24230DF600EEABE7 /* StashCoachInteractor.swift in Sources */,
+				EAB8465624230D2F00EEABE7 /* StashCoachRouter.swift in Sources */,
 				EA48EDC5242069FA004494BF /* ViewController.swift in Sources */,
 				EA48EDC1242069FA004494BF /* AppDelegate.swift in Sources */,
 				EA48EDDE24227894004494BF /* StashCollectionViewCell.swift in Sources */,
+				EAB8465824230DC500EEABE7 /* StashCoachPresenter.swift in Sources */,
 				EA48EDC3242069FA004494BF /* SceneDelegate.swift in Sources */,
 				EA48EDD824211943004494BF /* StashCoachCollectionViewController.swift in Sources */,
 			);
