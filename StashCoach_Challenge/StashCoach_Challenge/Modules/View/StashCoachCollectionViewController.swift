@@ -35,7 +35,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        print(achievements.count)
+//        print(achievements.count)
         return self.achievements.count
     }
 
@@ -60,7 +60,10 @@ class StashCoachCollectionViewController: UICollectionViewController {
             })
             
 //        }
-      
+        
+        if  !achievements[indexPath.section].accessible {
+            cell.imageView.alpha = 0.5
+        }
     
         return cell
     }
