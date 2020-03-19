@@ -11,6 +11,8 @@ import UIKit
 class StashCoachInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
 
+    
+    // uses the Entity to 
     func readJSON() {
         presenter?.achievementsFetched()
     }

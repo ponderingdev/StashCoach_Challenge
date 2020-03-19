@@ -19,6 +19,8 @@
 		EAB8465624230D2F00EEABE7 /* StashCoachRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465524230D2F00EEABE7 /* StashCoachRouter.swift */; };
 		EAB8465824230DC500EEABE7 /* StashCoachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465724230DC500EEABE7 /* StashCoachPresenter.swift */; };
 		EAB8465A24230DF600EEABE7 /* StashCoachInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */; };
+		EAB8465D2423A15F00EEABE7 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */; };
+		EAB8465F2423A26700EEABE7 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EAB8465524230D2F00EEABE7 /* StashCoachRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachRouter.swift; sourceTree = "<group>"; };
 		EAB8465724230DC500EEABE7 /* StashCoachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachPresenter.swift; sourceTree = "<group>"; };
 		EAB8465924230DF600EEABE7 /* StashCoachInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachInteractor.swift; sourceTree = "<group>"; };
+		EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		EAB8464B2422C5FA00EEABE7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8465B2423A09200EEABE7 /* Entity */,
 				EAB846502422C63B00EEABE7 /* View */,
 				EAB8464F2422C63300EEABE7 /* Presenter */,
 				EAB8464E2422C62400EEABE7 /* Interactor */,
@@ -131,6 +136,15 @@
 				EA48EDC4242069FA004494BF /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EAB8465B2423A09200EEABE7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */,
+				EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB846522422C72600EEABE7 /* StashCoachProtocols.swift in Sources */,
+				EAB8465D2423A15F00EEABE7 /* AchievementModel.swift in Sources */,
 				EAB8465A24230DF600EEABE7 /* StashCoachInteractor.swift in Sources */,
+				EAB8465F2423A26700EEABE7 /* AchievementsResponse.swift in Sources */,
 				EAB8465624230D2F00EEABE7 /* StashCoachRouter.swift in Sources */,
 				EA48EDC5242069FA004494BF /* ViewController.swift in Sources */,
 				EA48EDC1242069FA004494BF /* AppDelegate.swift in Sources */,
