@@ -15,6 +15,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     var presenter: ViewToPresenterProtocol?
     
+    var achievements = [AchievementModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,9 +35,9 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        print(achievements.count)
+        return self.achievements.count
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -43,18 +45,21 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         cell.index = indexPath
         
         
         cell.imageView.backgroundColor = .blue
 
-//        print("cell index:\(cell.index) indexpath:\(indexPath)")
+        print("indexpath:\(indexPath.section)")
         if cell.index == indexPath{
-            cell.getImage { data in
-                cell.imageView.image = UIImage(data: data)
-            }
+//            cell.getImage { data in
+//                cell.imageView.image = UIImage(data: data)
+//            }
+            cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
+                cell.imageView.image = UIImage(data: imageData)
+            })
+            
         }
       
     
@@ -98,6 +103,7 @@ extension StashCoachCollectionViewController: PresenterToViewProtocol {
     func displayCollectionView(_ title:String, _ data:[AchievementModel]) {
         collectionView.reloadData()
         self.title = title
+        self.achievements = data
     }
     
     func displayError() {
