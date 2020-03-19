@@ -8,6 +8,12 @@
 
 import UIKit
 
-class StashCoachInteractor: NSObject {
+class StashCoachInteractor: PresenterToInteractorProtocol {
+    var presenter: InteractorToPresenterProtocol?
+
+    func readJSON() {
+    }
+    
+    
 
 }

@@ -8,6 +8,27 @@
 
 import UIKit
 
-class StashCoachPresenter: NSObject {
+class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtocol{
+    
+    var view: PresenterToViewProtocol?
+       
+    var interactor: PresenterToInteractorProtocol?
+       
+    var router: PresenterToRouterProtocol?
+   
+    func achievementsFetched() {
+        print("fun")
+    }
+    
+    func achievementsFetchFailed() {
+        print("fun")
+    }
+    
+    
+    func updateView() {
+        print("fun")
+    }
+    
+    
 
 }

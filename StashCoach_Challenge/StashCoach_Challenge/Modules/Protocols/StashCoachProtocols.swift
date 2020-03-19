@@ -31,5 +31,6 @@ protocol ViewToPresenterProtocol: class {
     func updateView()
 }
 protocol PresenterToRouterProtocol: class {
-    func setUp() -> UIViewController
+//    func setUp() -> UIViewController
+    func setUp()
 }

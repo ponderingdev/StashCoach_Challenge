@@ -8,6 +8,13 @@
 
 import UIKit
 
-class StashCoachIterator: NSObject {
+class StashCoachIterator: PresenterToRouterProtocol {
+    
+    func setUp() -> UIViewController {
+        let vc = UIViewController()
+        return vc
+    }
+    
+
 
 }

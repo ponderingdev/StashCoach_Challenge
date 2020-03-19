@@ -91,7 +91,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ece-d0-0yl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gP1-Pd-Xfq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StachCoachNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="gP1-Pd-Xfq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JhR-2o-K15">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

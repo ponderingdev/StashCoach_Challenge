@@ -16,9 +16,11 @@ class ViewController: UIViewController {
 
     @IBAction func beginButton(_ sender: Any) {
         
+        let router = StashCoachRouter()
+        router.setUp()
         
-        let collectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
-        self.navigationController?.pushViewController(collectionVC, animated: true)
+//        let collectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
+//        self.navigationController?.pushViewController(pr, animated: true)
     }
     
     override func viewDidLoad() {
