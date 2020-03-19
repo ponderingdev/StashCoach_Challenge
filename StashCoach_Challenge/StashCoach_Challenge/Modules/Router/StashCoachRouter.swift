@@ -10,25 +10,26 @@ import UIKit
 
 class StashCoachRouter: PresenterToRouterProtocol {
     
-//    let presenter
+    let presenter: StashCoachPresenter
+    
+    init() {
+        self.presenter = StashCoachPresenter()
+        
+    }
     
     func setUp() {
 
         let collectionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
 
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = StashCoachPresenter()
         let interactor: PresenterToInteractorProtocol = StashCoachInteractor()
         let router: PresenterToRouterProtocol = StashCoachRouter()
     
         
-        collectionView.presenter = presenter
-//        presenter.view = collectionView
-        presenter.router = router
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        
-        
-        
+        collectionView.presenter = self.presenter
+        self.presenter.view = collectionView
+        self.presenter.router = router
+        self.presenter.interactor = interactor
+        interactor.presenter = self.presenter
         
         
     }

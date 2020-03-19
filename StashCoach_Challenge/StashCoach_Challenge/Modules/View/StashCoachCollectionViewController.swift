@@ -92,4 +92,17 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
     }
 
+extension StashCoachCollectionViewController: PresenterToViewProtocol {
+    
+    func displayCollectionView() {
+            
+    }
+    
+    func displayError() {
+        
+    }
+    
+    
+}
+
 

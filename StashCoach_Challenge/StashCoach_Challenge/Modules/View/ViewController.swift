@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         router.setUp()
         
 //        let collectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
-//        self.navigationController?.pushViewController(pr, animated: true)
+        self.navigationController?.pushViewController(router.presenter.view as! StashCoachCollectionViewController, animated: true)
     }
     
     override func viewDidLoad() {
