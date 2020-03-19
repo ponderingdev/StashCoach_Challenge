@@ -30,8 +30,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     }
 
-
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -75,7 +73,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
         
         
-        return CGSize(width: availableWidth, height: availableWidth)
+        return CGSize(width: availableWidth * 1.5, height: availableWidth)
         
       }
       
