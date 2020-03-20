@@ -92,7 +92,7 @@
                                             </constraints>
                                         </view>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GP1-Fc-cN5" userLabel="progressView">
-                                            <rect key="frame" x="20" y="135" width="218" height="8"/>
+                                            <rect key="frame" x="20" y="135" width="178" height="8"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="8" id="b22-Zk-Hip"/>
                                             </constraints>
@@ -115,7 +115,7 @@
                                         <constraint firstItem="0U7-ZW-da3" firstAttribute="centerX" secondItem="ykW-rS-fG0" secondAttribute="centerX" id="iLT-3i-spS"/>
                                         <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="igE-Bu-ZAb"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="mbt-Rr-cJL"/>
-                                        <constraint firstItem="GP1-Fc-cN5" firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" constant="20" id="upt-5F-Oga"/>
+                                        <constraint firstItem="GP1-Fc-cN5" firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" constant="-20" id="upt-5F-Oga"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="v2g-Ux-mB3"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="zCF-U3-BRd"/>
                                     </constraints>
