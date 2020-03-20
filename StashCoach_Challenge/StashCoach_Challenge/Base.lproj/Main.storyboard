@@ -60,14 +60,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="218" height="197"/>
                                             <color key="backgroundColor" red="0.75855616579999996" green="0.77167665159999999" blue="0.161566185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e39-9g-Ud3" userLabel="circle">
-                                            <rect key="frame" x="60" y="25" width="98" height="100"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" placeholder="YES" id="63H-vK-5Yr"/>
-                                                <constraint firstAttribute="width" constant="100" placeholder="YES" id="ciP-Vz-KgK"/>
-                                            </constraints>
-                                        </imageView>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="urR-9B-Vqw">
                                             <rect key="frame" x="34" y="154" width="150" height="2"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,18 +70,14 @@
                                         <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="LMO-6n-JIQ"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="R2L-jW-sjD"/>
                                         <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="YDm-Oa-VZn"/>
-                                        <constraint firstAttribute="trailing" secondItem="e39-9g-Ud3" secondAttribute="trailing" constant="60" id="gKV-8b-ipx"/>
-                                        <constraint firstItem="e39-9g-Ud3" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" constant="60" id="hOT-Xu-9Q4"/>
                                         <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="igE-Bu-ZAb"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="mbt-Rr-cJL"/>
-                                        <constraint firstItem="e39-9g-Ud3" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" constant="25" id="mef-uG-1zI"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="v2g-Ux-mB3"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="leading" secondItem="uRU-Nc-lhX" secondAttribute="leading" id="zCF-U3-BRd"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="218" height="197"/>
                                 <connections>
-                                    <outlet property="circularView" destination="e39-9g-Ud3" id="12Z-Hf-iJ9"/>
                                     <outlet property="imageView" destination="ykW-rS-fG0" id="1U8-Uh-fh7"/>
                                 </connections>
                             </collectionViewCell>

@@ -48,18 +48,13 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
         
-        cell.imageView.backgroundColor = .white
-
-//        print("indexpath:\(indexPath.section)")
-//        print("url:\(achievements[indexPath.section].bg_image_url)")
+        cell.imageView.backgroundColor = .systemPink
         
         
-//        if cell.index == indexPath{
-            cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
+        cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
             })
             
-//        }
         
         if  !achievements[indexPath.section].accessible {
             cell.imageView.alpha = 0.5

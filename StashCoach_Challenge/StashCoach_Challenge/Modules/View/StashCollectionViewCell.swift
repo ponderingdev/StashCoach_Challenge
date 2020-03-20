@@ -15,12 +15,17 @@ class StashCollectionViewCell: UICollectionViewCell {
     var index : IndexPath!
     @IBOutlet var imageView: UIImageView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.contentView.frame = self.bounds
+
+        self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
         
+//        circularView.backgroundColor = UIColor(white: 1, alpha: 0.5)
+//        circularView.layer.cornerRadius = imageView.frame.size.width/2
+//        circularView.clipsToBounds = true
     }
     
     override func prepareForReuse() {
