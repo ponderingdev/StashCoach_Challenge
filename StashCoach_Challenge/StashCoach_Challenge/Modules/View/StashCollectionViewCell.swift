@@ -11,7 +11,6 @@ import UIKit
 class StashCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet var circularView: UIImageView!
     var index : IndexPath!
     @IBOutlet var imageView: UIImageView!
     
