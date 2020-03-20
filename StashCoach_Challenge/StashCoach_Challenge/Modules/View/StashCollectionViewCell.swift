@@ -21,6 +21,10 @@ class StashCollectionViewCell: UICollectionViewCell {
         
         self.imageView.contentMode = UIView.ContentMode.scaleToFill
         
+       circularView.layer.cornerRadius = circularView.frame.size.width/2
+       circularView.clipsToBounds = true
+        
+        
     }
     
     override func prepareForReuse() {

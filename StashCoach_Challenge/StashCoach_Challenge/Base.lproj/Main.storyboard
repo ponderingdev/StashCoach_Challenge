@@ -61,10 +61,10 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ZW-da3" userLabel="circularView">
-                                            <rect key="frame" x="68" y="22" width="82" height="81"/>
+                                            <rect key="frame" x="65.5" y="22" width="87" height="82"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-Z7-M2x" userLabel="level">
-                                                    <rect key="frame" x="20" y="5" width="38" height="18"/>
+                                                    <rect key="frame" x="20" y="5" width="43" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="sD3-xK-ATV"/>
                                                     </constraints>
@@ -73,7 +73,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-h2-fQ8" userLabel="number">
-                                                    <rect key="frame" x="20" y="28" width="38" height="54"/>
+                                                    <rect key="frame" x="20" y="28" width="43" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -87,6 +87,7 @@
                                                 <constraint firstItem="vDL-Z7-M2x" firstAttribute="top" secondItem="0U7-ZW-da3" secondAttribute="top" constant="5" id="V2X-Zp-fM3"/>
                                                 <constraint firstItem="QEh-h2-fQ8" firstAttribute="leading" secondItem="0U7-ZW-da3" secondAttribute="leading" constant="20" id="f1x-ju-f3l"/>
                                                 <constraint firstItem="vDL-Z7-M2x" firstAttribute="leading" secondItem="0U7-ZW-da3" secondAttribute="leading" constant="20" id="fRJ-W4-ljS"/>
+                                                <constraint firstAttribute="width" secondItem="0U7-ZW-da3" secondAttribute="height" multiplier="1:1" id="svW-BW-PBh"/>
                                                 <constraint firstAttribute="trailing" secondItem="QEh-h2-fQ8" secondAttribute="trailing" constant="24" id="uiB-W6-ddR"/>
                                             </constraints>
                                         </view>
