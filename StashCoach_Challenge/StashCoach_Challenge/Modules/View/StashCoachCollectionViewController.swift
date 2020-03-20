@@ -71,7 +71,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let paddingSpace = sectionInsets.left * 10
         let availableWidth = view.frame.width - paddingSpace
         
-        return CGSize(width: availableWidth * 1.5, height: availableWidth)
+        return CGSize(width: availableWidth * 1.5, height: availableWidth - 20.0)
         
       }
       
