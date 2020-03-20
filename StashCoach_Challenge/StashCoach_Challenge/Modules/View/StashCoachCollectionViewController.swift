@@ -49,8 +49,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         
         cell.imageView.backgroundColor = .systemPink
-        
-        
+    
         cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
             })
