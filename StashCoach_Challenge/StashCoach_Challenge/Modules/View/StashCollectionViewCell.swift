@@ -14,6 +14,8 @@ class StashCollectionViewCell: UICollectionViewCell {
     var index : IndexPath!
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var circularView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
