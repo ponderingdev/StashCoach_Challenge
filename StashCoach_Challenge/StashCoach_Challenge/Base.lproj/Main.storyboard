@@ -110,8 +110,8 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-xV-En0" userLabel="end">
-                                                    <rect key="frame" x="122" y="0.0" width="42" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-xV-En0" userLabel="end">
+                                                    <rect key="frame" x="136" y="0.0" width="42" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="F76-Nc-542"/>
                                                     </constraints>
@@ -120,15 +120,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="HKo-Hz-TiS" secondAttribute="bottom" id="2i3-r7-6TM"/>
                                                 <constraint firstItem="HKo-Hz-TiS" firstAttribute="leading" secondItem="ZGi-SW-Riw" secondAttribute="leading" id="6mz-DV-Gq6"/>
                                                 <constraint firstAttribute="height" constant="20" id="EZm-Lj-vXE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rpf-xV-En0" secondAttribute="trailing" id="JtI-MU-b7Z"/>
                                                 <constraint firstAttribute="bottom" secondItem="Rpf-xV-En0" secondAttribute="bottom" id="mZh-cl-h8e"/>
                                                 <constraint firstItem="Rpf-xV-En0" firstAttribute="top" secondItem="ZGi-SW-Riw" secondAttribute="top" id="nJf-Yh-Hd6"/>
                                                 <constraint firstItem="HKo-Hz-TiS" firstAttribute="top" secondItem="ZGi-SW-Riw" secondAttribute="top" id="p2F-wi-v8L"/>
-                                                <constraint firstItem="Rpf-xV-En0" firstAttribute="leading" secondItem="HKo-Hz-TiS" secondAttribute="trailing" constant="80" id="p75-mu-TYy"/>
                                             </constraints>
                                         </view>
                                     </subviews>
