@@ -47,7 +47,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
-        
+        cell.backgroundColor = .red
         cell.imageView.backgroundColor = .systemPink
     
         cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in

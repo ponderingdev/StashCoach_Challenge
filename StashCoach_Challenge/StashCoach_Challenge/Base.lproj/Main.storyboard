@@ -98,20 +98,25 @@
                                             </constraints>
                                             <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </progressView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-YU-OCj">
-                                            <rect key="frame" x="37" y="151" width="144" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-YU-OCj" userLabel="pointsView">
+                                            <rect key="frame" x="20" y="146" width="178" height="10"/>
                                             <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="yMJ-pP-odl"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="4yM-Wa-cQS"/>
                                         <constraint firstItem="0U7-ZW-da3" firstAttribute="top" secondItem="ykW-rS-fG0" secondAttribute="top" constant="20" id="70y-YF-XTA"/>
+                                        <constraint firstItem="8hd-YU-OCj" firstAttribute="top" secondItem="GP1-Fc-cN5" secondAttribute="bottom" constant="3" id="85W-Jt-Yah"/>
                                         <constraint firstItem="GP1-Fc-cN5" firstAttribute="top" secondItem="0U7-ZW-da3" secondAttribute="bottom" constant="28" id="8xC-HF-pFo"/>
+                                        <constraint firstItem="8hd-YU-OCj" firstAttribute="leading" secondItem="ykW-rS-fG0" secondAttribute="leading" constant="20" id="K0U-Ex-WWX"/>
                                         <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="LMO-6n-JIQ"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="R2L-jW-sjD"/>
                                         <constraint firstItem="GP1-Fc-cN5" firstAttribute="leading" secondItem="ykW-rS-fG0" secondAttribute="leading" constant="20" id="U6w-aC-noD"/>
                                         <constraint firstAttribute="bottom" secondItem="ykW-rS-fG0" secondAttribute="bottom" id="YDm-Oa-VZn"/>
+                                        <constraint firstItem="8hd-YU-OCj" firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" constant="-20" id="eHV-AI-MxX"/>
                                         <constraint firstItem="0U7-ZW-da3" firstAttribute="centerX" secondItem="ykW-rS-fG0" secondAttribute="centerX" id="iLT-3i-spS"/>
                                         <constraint firstAttribute="trailing" secondItem="ykW-rS-fG0" secondAttribute="trailing" id="igE-Bu-ZAb"/>
                                         <constraint firstItem="ykW-rS-fG0" firstAttribute="top" secondItem="uRU-Nc-lhX" secondAttribute="top" id="mbt-Rr-cJL"/>
