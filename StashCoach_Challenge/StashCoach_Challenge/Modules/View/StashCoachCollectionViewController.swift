@@ -12,7 +12,7 @@ import UIKit
 class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
-    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 0.0, right: 5.0)
+    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 5.0, right: 5.0)
     var presenter: ViewToPresenterProtocol?
     
     var achievements = [AchievementModel]()
@@ -80,7 +80,11 @@ class StashCoachCollectionViewController: UICollectionViewController {
                           layout collectionViewLayout: UICollectionViewLayout,
                           insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return sectionInsets
+        if section == 0 {
+            return sectionInsets
+        }
+        
+        return UIEdgeInsets(top: 5.0,left: 0,bottom: 5.0,right: 0)
       }
         
     }
