@@ -38,7 +38,10 @@ class StashCollectionViewCell: UICollectionViewCell {
         progressView.clipsToBounds = true
         
         
-        
+        let points = "pts"
+        numericLevel.text = "10"
+        progressLabel.text = "4" + points
+        totalLabel.text = "100" + points
     }
     
     override func prepareForReuse() {

@@ -157,7 +157,7 @@
                                     <outlet property="circularView" destination="0U7-ZW-da3" id="SQO-Hl-nOl"/>
                                     <outlet property="imageView" destination="ykW-rS-fG0" id="1U8-Uh-fh7"/>
                                     <outlet property="numericLevel" destination="QEh-h2-fQ8" id="Tne-LF-DLf"/>
-                                    <outlet property="progressLabel" destination="Rpf-xV-En0" id="UPD-Pl-fBK"/>
+                                    <outlet property="progressLabel" destination="HKo-Hz-TiS" id="DU6-WH-CSL"/>
                                     <outlet property="progressView" destination="GP1-Fc-cN5" id="gUe-sh-7Ei"/>
                                     <outlet property="totalLabel" destination="Rpf-xV-En0" id="dYh-hv-rfc"/>
                                 </connections>
