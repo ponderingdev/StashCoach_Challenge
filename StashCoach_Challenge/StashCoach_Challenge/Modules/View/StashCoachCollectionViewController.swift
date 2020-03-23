@@ -22,9 +22,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
         presenter?.updateView()
         
-        // Register cell classes
-//        self.collectionView!.register(StashCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifer)
-
        let infoButton = UIButton(type: .infoLight)
         infoButton.tintColor = .white
         let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
