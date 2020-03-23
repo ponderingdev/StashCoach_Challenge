@@ -12,7 +12,7 @@ import UIKit
 class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
-    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 1.0, right: 20.0)
+    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 0.0, right: 5.0)
     var presenter: ViewToPresenterProtocol?
     
     var achievements = [AchievementModel]()
@@ -47,7 +47,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
-        cell.backgroundColor = .red
     
         cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
@@ -68,10 +67,11 @@ class StashCoachCollectionViewController: UICollectionViewController {
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let paddingSpace = sectionInsets.left * 10
-        let availableWidth = view.frame.width - paddingSpace
+//        let paddingSpace = sectionInsets.left * 10
+//        let availableWidth = view.frame.width - paddingSpace
+        let cellwidth = view.frame.width - 50.0
         
-        return CGSize(width: availableWidth * 1.5, height: availableWidth - 20.0)
+        return CGSize(width: cellwidth, height: cellwidth - 150.0)
         
       }
       
