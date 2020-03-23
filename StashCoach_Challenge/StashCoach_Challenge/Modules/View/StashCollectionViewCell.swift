@@ -24,6 +24,9 @@ class StashCollectionViewCell: UICollectionViewCell {
        circularView.layer.cornerRadius = circularView.frame.size.width/2
        circularView.clipsToBounds = true
         
+        imageView.layer.cornerRadius = 8.0
+        imageView.clipsToBounds = true
+        
         
     }
     

@@ -56,6 +56,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
         if  !achievements[indexPath.section].accessible {
             cell.imageView.alpha = 0.5
         }
+        
+        
     
         return cell
     }
@@ -67,8 +69,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let paddingSpace = sectionInsets.left * 10
-//        let availableWidth = view.frame.width - paddingSpace
         let cellwidth = view.frame.width - 50.0
         
         return CGSize(width: cellwidth, height: cellwidth - 150.0)
