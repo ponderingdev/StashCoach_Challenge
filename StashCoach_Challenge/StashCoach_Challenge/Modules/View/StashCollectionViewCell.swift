@@ -11,10 +11,12 @@ import UIKit
 class StashCollectionViewCell: UICollectionViewCell {
     
     
-    var index : IndexPath!
-    @IBOutlet var imageView: UIImageView!
+//    var index : IndexPath!
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var circularView: UIView!
+    
+    @IBOutlet var progressView: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,9 +25,13 @@ class StashCollectionViewCell: UICollectionViewCell {
         
        circularView.layer.cornerRadius = circularView.frame.size.width/2
        circularView.clipsToBounds = true
+        circularView.alpha = 0.85
         
         imageView.layer.cornerRadius = 8.0
         imageView.clipsToBounds = true
+
+//        progressView.layer.cornerRadius = 8.0
+//        progressView.clipsToBounds = true
         
         
     }
