@@ -18,6 +18,10 @@ class StashCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var progressView: UIProgressView!
     
+    @IBOutlet var numericLevel: UILabel!
+    @IBOutlet var progressLabel: UILabel!
+    @IBOutlet var totalLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,8 +34,9 @@ class StashCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 8.0
         imageView.clipsToBounds = true
 
-//        progressView.layer.cornerRadius = 8.0
-//        progressView.clipsToBounds = true
+        progressView.layer.cornerRadius = 5
+        progressView.clipsToBounds = true
+        
         
         
     }

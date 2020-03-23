@@ -79,7 +79,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="QEh-h2-fQ8" firstAttribute="top" secondItem="vDL-Z7-M2x" secondAttribute="bottom" constant="5" id="9kk-S4-9Cu"/>
                                                 <constraint firstAttribute="bottom" secondItem="QEh-h2-fQ8" secondAttribute="bottom" constant="5" id="AOJ-n5-fZ5"/>
@@ -96,6 +96,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="8" id="b22-Zk-Hip"/>
                                             </constraints>
+                                            <color key="progressTintColor" red="0.33046363918913024" green="0.77085377344020123" blue="0.11684141254128205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </progressView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGi-SW-Riw" userLabel="pointsView">
@@ -155,6 +156,10 @@
                                 <connections>
                                     <outlet property="circularView" destination="0U7-ZW-da3" id="SQO-Hl-nOl"/>
                                     <outlet property="imageView" destination="ykW-rS-fG0" id="1U8-Uh-fh7"/>
+                                    <outlet property="numericLevel" destination="QEh-h2-fQ8" id="Tne-LF-DLf"/>
+                                    <outlet property="progressLabel" destination="Rpf-xV-En0" id="UPD-Pl-fBK"/>
+                                    <outlet property="progressView" destination="GP1-Fc-cN5" id="gUe-sh-7Ei"/>
+                                    <outlet property="totalLabel" destination="Rpf-xV-En0" id="dYh-hv-rfc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
