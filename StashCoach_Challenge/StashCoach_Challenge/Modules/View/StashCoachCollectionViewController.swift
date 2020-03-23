@@ -35,7 +35,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        print(achievements.count)
         return self.achievements.count
     }
 
@@ -57,6 +56,9 @@ class StashCoachCollectionViewController: UICollectionViewController {
             cell.imageView.alpha = 0.5
         }
         
+        cell.numericLevel.text = achievements[indexPath.section].level
+        cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
+        cell.totalLabel.text = String(achievements[indexPath.section].total) + cell.totalLabel.text!
         
     
         return cell

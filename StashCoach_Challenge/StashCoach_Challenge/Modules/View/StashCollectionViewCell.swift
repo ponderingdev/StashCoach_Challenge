@@ -10,9 +10,7 @@ import UIKit
 
 class StashCollectionViewCell: UICollectionViewCell {
     
-    
-//    var index : IndexPath!
-    
+        
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var circularView: UIView!
     
@@ -21,6 +19,9 @@ class StashCollectionViewCell: UICollectionViewCell {
     @IBOutlet var numericLevel: UILabel!
     @IBOutlet var progressLabel: UILabel!
     @IBOutlet var totalLabel: UILabel!
+    
+    let points = "pts"
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,10 +39,8 @@ class StashCollectionViewCell: UICollectionViewCell {
         progressView.clipsToBounds = true
         
         
-        let points = "pts"
-        numericLevel.text = "10"
-        progressLabel.text = "4" + points
-        totalLabel.text = "100" + points
+        progressLabel.text = points
+        totalLabel.text = points
     }
     
     override func prepareForReuse() {
