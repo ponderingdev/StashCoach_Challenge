@@ -52,12 +52,15 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         if  !achievements[indexPath.section].accessible {
             for view in cell.contentView.subviews{
-                view.alpha = 0.5
+                view.alpha = 0.6
             }
             
         }
         
         cell.numericLevel.text = achievements[indexPath.section].level
+        
+        cell.progressView.progress = Float(achievements[indexPath.section].progress)
+        
         cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
         cell.totalLabel.text = String(achievements[indexPath.section].total) + cell.totalLabel.text!
         
