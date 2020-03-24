@@ -54,7 +54,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
             for view in cell.contentView.subviews{
                 //skip circle view
                 if view.tag == 1{
-                    view.backgroundColor = .white
+//                    view.backgroundColor = .white
                     view.alpha = 0.9
                     for label in view.subviews{
                         label.alpha = 0.5
@@ -62,7 +62,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
 //                    print("skipping: \(type(of: view))")
                     continue
                 }
-                print("applying transparency to:\(type(of: view))")
+//                print("applying transparency to:\(type(of: view))")
                 view.alpha = 0.5
             }
             
@@ -73,6 +73,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         cell.progressView.observedProgress = Progress(totalUnitCount: Int64(achievements[indexPath.section].total))
         cell.progressView.observedProgress?.completedUnitCount = Int64(achievements[indexPath.section].progress)
+//        cell.progressView.observedProgress?.back
     
                 
         cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
