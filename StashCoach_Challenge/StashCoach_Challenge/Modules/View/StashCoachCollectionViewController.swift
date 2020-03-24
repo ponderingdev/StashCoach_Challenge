@@ -52,15 +52,32 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         if  !achievements[indexPath.section].accessible {
             for view in cell.contentView.subviews{
+                //skip circle view
+                if type(of: view) .isEqual(UIView.self){
+//                    print("skipping: \(type(of: view))")
+                    continue
+                }
                 view.alpha = 0.6
             }
             
         }
         
+//        if achievements[indexPath.section].accessible{
+//            cell.circularView.alpha = 0.6
+//        }
+//        else {
+//            cell.circularView.backgroundColor = .white
+//        }
+        
+        
+        
         cell.numericLevel.text = achievements[indexPath.section].level
         
-        cell.progressView.progress = Float(achievements[indexPath.section].progress)
+        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(achievements[indexPath.section].total))
+        cell.progressView.observedProgress?.completedUnitCount = Int64(achievements[indexPath.section].progress)
         
+        
+                
         cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
         cell.totalLabel.text = String(achievements[indexPath.section].total) + cell.totalLabel.text!
         
