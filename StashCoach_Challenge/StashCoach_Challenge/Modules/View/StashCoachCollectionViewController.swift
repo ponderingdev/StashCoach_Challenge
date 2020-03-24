@@ -53,10 +53,10 @@ class StashCoachCollectionViewController: UICollectionViewController {
         if  !achievements[indexPath.section].accessible {
             for view in cell.contentView.subviews{
                 //skip circle view
-                if type(of: view) .isEqual(UIView.self){
+//                if type(of: view) .isEqual(UIView.self){
 //                    print("skipping: \(type(of: view))")
-                    continue
-                }
+//                    continue
+//                }
                 view.alpha = 0.6
             }
             
