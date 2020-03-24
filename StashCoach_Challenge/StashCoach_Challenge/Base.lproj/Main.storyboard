@@ -63,8 +63,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ZW-da3" userLabel="circularView">
                                             <rect key="frame" x="64.5" y="30" width="89" height="89"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-Z7-M2x" userLabel="level">
-                                                    <rect key="frame" x="20" y="20" width="45" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-Z7-M2x" userLabel="level">
+                                                    <rect key="frame" x="26.5" y="20" width="36" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="sD3-xK-ATV"/>
                                                     </constraints>
@@ -73,7 +73,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-h2-fQ8" userLabel="number">
-                                                    <rect key="frame" x="20" y="30" width="45" height="54"/>
+                                                    <rect key="frame" x="34.5" y="30" width="20.5" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -83,12 +83,10 @@
                                             <constraints>
                                                 <constraint firstItem="QEh-h2-fQ8" firstAttribute="top" secondItem="vDL-Z7-M2x" secondAttribute="bottom" constant="-8" id="9kk-S4-9Cu"/>
                                                 <constraint firstAttribute="bottom" secondItem="QEh-h2-fQ8" secondAttribute="bottom" constant="5" id="AOJ-n5-fZ5"/>
-                                                <constraint firstAttribute="trailing" secondItem="vDL-Z7-M2x" secondAttribute="trailing" constant="24" id="UnC-Y7-o7f"/>
+                                                <constraint firstItem="QEh-h2-fQ8" firstAttribute="centerX" secondItem="0U7-ZW-da3" secondAttribute="centerX" id="Mov-cD-Bb9"/>
                                                 <constraint firstItem="vDL-Z7-M2x" firstAttribute="top" secondItem="0U7-ZW-da3" secondAttribute="top" constant="20" id="V2X-Zp-fM3"/>
-                                                <constraint firstItem="QEh-h2-fQ8" firstAttribute="leading" secondItem="0U7-ZW-da3" secondAttribute="leading" constant="20" id="f1x-ju-f3l"/>
-                                                <constraint firstItem="vDL-Z7-M2x" firstAttribute="leading" secondItem="0U7-ZW-da3" secondAttribute="leading" constant="20" id="fRJ-W4-ljS"/>
+                                                <constraint firstItem="vDL-Z7-M2x" firstAttribute="centerX" secondItem="0U7-ZW-da3" secondAttribute="centerX" id="nuv-hc-qS6"/>
                                                 <constraint firstAttribute="width" secondItem="0U7-ZW-da3" secondAttribute="height" multiplier="1:1" id="svW-BW-PBh"/>
-                                                <constraint firstAttribute="trailing" secondItem="QEh-h2-fQ8" secondAttribute="trailing" constant="24" id="uiB-W6-ddR"/>
                                             </constraints>
                                         </view>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GP1-Fc-cN5" userLabel="progressView">

@@ -12,7 +12,7 @@ import UIKit
 class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
-    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 5.0, right: 5.0)
+    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
     var presenter: ViewToPresenterProtocol?
     
     var achievements = [AchievementModel]()
@@ -49,8 +49,12 @@ class StashCoachCollectionViewController: UICollectionViewController {
             })
             
         
+        
         if  !achievements[indexPath.section].accessible {
-            cell.imageView.alpha = 0.5
+            for view in cell.contentView.subviews{
+                view.alpha = 0.5
+            }
+            
         }
         
         cell.numericLevel.text = achievements[indexPath.section].level
@@ -83,7 +87,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
             return sectionInsets
         }
         
-        return UIEdgeInsets(top: 5.0,left: 0,bottom: 5.0,right: 0)
+        return UIEdgeInsets(top: 8.0,left: 0,bottom: 8.0,right: 0)
       }
         
     }

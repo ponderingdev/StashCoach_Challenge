@@ -39,6 +39,8 @@ class StashCollectionViewCell: UICollectionViewCell {
         progressView.clipsToBounds = true
         
         
+        
+        
         progressLabel.text = points
         totalLabel.text = points
     }
