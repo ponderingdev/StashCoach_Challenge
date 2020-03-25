@@ -21,7 +21,7 @@ protocol InteractorToPresenterProtocol : class{
 }
 
 protocol PresenterToInteractorProtocol: class{
-    func readJSON()
+    func readJSON(_ path:String, _ filetype:String)
     var presenter: InteractorToPresenterProtocol?{get set}
 }
 protocol ViewToPresenterProtocol: class {

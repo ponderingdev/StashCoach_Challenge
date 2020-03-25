@@ -30,7 +30,7 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
     }
     
     func updateView() {
-        interactor?.readJSON()
+        interactor?.readJSON("Achievements", "json")
     }
     
     
