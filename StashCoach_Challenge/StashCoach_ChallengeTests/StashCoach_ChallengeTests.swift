@@ -28,7 +28,7 @@ class StashCoach_ChallengeTests: XCTestCase {
     }
     
     func testRouterSetup(){
-        XCTAssertNotNil(self.router)
+        XCTAssertNotNil(router)
         
         XCTAssertNotNil(presenter.view)
         XCTAssertNotNil(presenter.interactor)
@@ -41,9 +41,12 @@ class StashCoach_ChallengeTests: XCTestCase {
     
     func testInteractorReadJSON(){
         let collectionVC = presenter.view as! StashCoachCollectionViewController
-        XCTAssertNil(collectionVC.achievements)
-//        presenter.interactor?.readJSON()
+        XCTAssertEqual(0, collectionVC.achievements.count, "List of achievements doesn't match")
         
+        presenter.interactor?.readJSON()
+        XCTAssertEqual(3, collectionVC.achievements.count, "List of achievements doesn't match")
+        
+
     }
     
 
