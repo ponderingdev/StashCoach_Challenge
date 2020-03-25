@@ -21,7 +21,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         presenter?.updateView()
-        
+    
        let infoButton = UIButton(type: .infoLight)
         infoButton.tintColor = .white
         let infoBarButtonItem = UIBarButtonItem(customView: infoButton)

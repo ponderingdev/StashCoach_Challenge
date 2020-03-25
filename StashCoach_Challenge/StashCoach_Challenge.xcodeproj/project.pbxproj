@@ -22,7 +22,18 @@
 		EAB8465D2423A15F00EEABE7 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */; };
 		EAB8465F2423A26700EEABE7 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */; };
 		EAB8466424242C1800EEABE7 /* Achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = EAB8466324242C1800EEABE7 /* Achievements.json */; };
+		EAB8469D242B944800EEABE7 /* StashCoach_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8469C242B944800EEABE7 /* StashCoach_ChallengeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAB8469F242B944800EEABE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA48EDB5242069FA004494BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA48EDBC242069FA004494BF;
+			remoteInfo = StashCoach_Challenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EA48EDBD242069FA004494BF /* StashCoach_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashCoach_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +53,20 @@
 		EAB8465C2423A15E00EEABE7 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsResponse.swift; sourceTree = "<group>"; };
 		EAB8466324242C1800EEABE7 /* Achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Achievements.json; sourceTree = "<group>"; };
+		EAB8469A242B944800EEABE7 /* StashCoach_ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoach_ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB8469C242B944800EEABE7 /* StashCoach_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoach_ChallengeTests.swift; sourceTree = "<group>"; };
+		EAB8469E242B944800EEABE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EA48EDBA242069FA004494BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAB84697242B944800EEABE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				EA48EDBF242069FA004494BF /* StashCoach_Challenge */,
+				EAB8469B242B944800EEABE7 /* StashCoach_ChallengeTests */,
 				EA48EDBE242069FA004494BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				EA48EDBD242069FA004494BF /* StashCoach_Challenge.app */,
+				EAB8469A242B944800EEABE7 /* StashCoach_ChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +181,15 @@
 			path = Achievements_JSON;
 			sourceTree = "<group>";
 		};
+		EAB8469B242B944800EEABE7 /* StashCoach_ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8469C242B944800EEABE7 /* StashCoach_ChallengeTests.swift */,
+				EAB8469E242B944800EEABE7 /* Info.plist */,
+			);
+			path = StashCoach_ChallengeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +210,24 @@
 			productReference = EA48EDBD242069FA004494BF /* StashCoach_Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EAB84699242B944800EEABE7 /* StashCoach_ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAB846A3242B944800EEABE7 /* Build configuration list for PBXNativeTarget "StashCoach_ChallengeTests" */;
+			buildPhases = (
+				EAB84696242B944800EEABE7 /* Sources */,
+				EAB84697242B944800EEABE7 /* Frameworks */,
+				EAB84698242B944800EEABE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAB846A0242B944800EEABE7 /* PBXTargetDependency */,
+			);
+			name = StashCoach_ChallengeTests;
+			productName = StashCoach_ChallengeTests;
+			productReference = EAB8469A242B944800EEABE7 /* StashCoach_ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,6 +240,10 @@
 				TargetAttributes = {
 					EA48EDBC242069FA004494BF = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					EAB84699242B944800EEABE7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EA48EDBC242069FA004494BF;
 					};
 				};
 			};
@@ -207,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				EA48EDBC242069FA004494BF /* StashCoach_Challenge */,
+				EAB84699242B944800EEABE7 /* StashCoach_ChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +275,13 @@
 				EAB8466424242C1800EEABE7 /* Achievements.json in Resources */,
 				EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */,
 				EA48EDC8242069FA004494BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAB84698242B944800EEABE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +306,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAB84696242B944800EEABE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAB8469D242B944800EEABE7 /* StashCoach_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAB846A0242B944800EEABE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA48EDBC242069FA004494BF /* StashCoach_Challenge */;
+			targetProxy = EAB8469F242B944800EEABE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA48EDC6242069FA004494BF /* Main.storyboard */ = {
@@ -414,6 +492,44 @@
 			};
 			name = Release;
 		};
+		EAB846A1242B944800EEABE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StashCoach_ChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "developer.jfab.StashCoach-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashCoach_Challenge.app/StashCoach_Challenge";
+			};
+			name = Debug;
+		};
+		EAB846A2242B944800EEABE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StashCoach_ChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "developer.jfab.StashCoach-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashCoach_Challenge.app/StashCoach_Challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,6 +547,15 @@
 			buildConfigurations = (
 				EA48EDD5242069FB004494BF /* Debug */,
 				EA48EDD6242069FB004494BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAB846A3242B944800EEABE7 /* Build configuration list for PBXNativeTarget "StashCoach_ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAB846A1242B944800EEABE7 /* Debug */,
+				EAB846A2242B944800EEABE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
