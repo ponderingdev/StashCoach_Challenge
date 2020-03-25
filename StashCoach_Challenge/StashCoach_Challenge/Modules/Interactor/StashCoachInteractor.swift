@@ -24,7 +24,8 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
         let response = try decoder.decode(AchievementsResponse.self, from: jsonData)
             presenter?.achievementsFetched(response)
         } catch{
-            print("unable to turn to JSON")
+            presenter?.achievementsFetched(nil)
+//            print("unable to turn to JSON")
         }
         
     }

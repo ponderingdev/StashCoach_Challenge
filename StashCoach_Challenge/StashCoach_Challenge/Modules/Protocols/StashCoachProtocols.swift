@@ -16,7 +16,7 @@ protocol PresenterToViewProtocol: class {
 }
 
 protocol InteractorToPresenterProtocol : class{
-    func achievementsFetched(_ response:AchievementsResponse)
+    func achievementsFetched(_ response:AchievementsResponse?)
     func achievementsFetchFailed()
 }
 

@@ -45,9 +45,10 @@ class StashCoach_ChallengeTests: XCTestCase {
         
         presenter.interactor?.readJSON()
         XCTAssertEqual(3, collectionVC.achievements.count, "List of achievements doesn't match")
-        
 
     }
+    
+    
     
 
 

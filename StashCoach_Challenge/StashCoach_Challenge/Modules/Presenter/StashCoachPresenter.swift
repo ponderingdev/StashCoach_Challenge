@@ -16,8 +16,14 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
        
     var router: PresenterToRouterProtocol?
    
-    func achievementsFetched(_ response:AchievementsResponse) {
-        view?.displayCollectionView(response.overview.title, response.achievements)
+    func achievementsFetched(_ response:AchievementsResponse?) {
+        if let data = response {
+            view?.displayCollectionView(data.overview.title, data.achievements)
+
+        }
+        else {
+            view?.displayError()
+        }
     }
     
     func achievementsFetchFailed() {
