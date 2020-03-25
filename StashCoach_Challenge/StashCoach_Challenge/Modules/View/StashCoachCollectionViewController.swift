@@ -112,10 +112,13 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
 extension StashCoachCollectionViewController: PresenterToViewProtocol {
     
-    func displayCollectionView(_ title:String, _ data:[AchievementModel]) {
+    func displayCollectionView(_ title:String, _ data:[AchievementModel]?) {
         collectionView.reloadData()
         self.title = title
-        self.achievements = data
+    
+        if let list = data{
+            self.achievements = list
+        }
     }
     
     func displayError() {
