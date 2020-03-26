@@ -41,23 +41,18 @@ class StashCoach_ChallengeTests: XCTestCase {
     
     func testInteractorReadJSON(){
         let collectionVC = presenter.view as! StashCoachCollectionViewController
-//        XCTAssertEqual(0, collectionVC.list?.count, "List of achievements doesn't match")
+        
+        
+        // Interactor 
+        presenter.interactor?.readJSON("invalid file path", "json")
+        XCTAssertNil(presenter.view?.data)
+        
+        presenter.interactor?.readJSON("Achievements_InvalidCodable", "json")
+        XCTAssertNil(presenter.view?.data)
+
         
         presenter.updateView()
-//        XCTAssertEqual(3, collectionVC.list?.count, "List of achievements doesn't match")
-        
-        //test valid json but invalid structure name valid
-        presenter.interactor?.readJSON("invalid file path", "json")
-        
-        //test codable structure
-        
-        
-        
-        
-    
-        //test decoding failed
-        
-        //test decoder is succesful
+        XCTAssertNotNil(presenter.view?.data)
 
     }
     

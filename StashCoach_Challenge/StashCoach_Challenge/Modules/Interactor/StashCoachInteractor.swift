@@ -15,7 +15,8 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
     // uses the Entity to
     func readJSON(_ path:String, _ filetype:String) {
     
-        guard let mainUrl = Bundle.main.url(forResource: path, withExtension: filetype) else { return }
+        guard let mainUrl = Bundle.main.url(forResource: path, withExtension: filetype)
+            else { return }
         do{
             
         let jsonData = try Data(contentsOf: mainUrl)
@@ -25,7 +26,6 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
             presenter?.achievementsFetched(response)
         } catch{
             presenter?.achievementsFetched(nil)
-//            print("unable to turn to JSON")
         }
         
     }
