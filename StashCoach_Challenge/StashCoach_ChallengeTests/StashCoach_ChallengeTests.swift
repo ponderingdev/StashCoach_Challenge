@@ -19,7 +19,6 @@ class StashCoach_ChallengeTests: XCTestCase {
     
         router = StashCoachRouter()
         presenter = router.presenter
-//        router.setUp()
         
     }
 
@@ -58,7 +57,7 @@ class StashCoach_ChallengeTests: XCTestCase {
 
     }
     
-    func testAchievementsFetched(){
+    func testPresenterAchievementsFetched(){
         presenter.achievementsFetched(nil)
         XCTAssertNil(presenter.view?.list)
         
@@ -77,15 +76,6 @@ class StashCoach_ChallengeTests: XCTestCase {
         XCTAssertEqual(dummyPresenter.response?.achievements.count, 2, "Collection count & guess don't match")
 
         
-    }
-    
-    func testDisplayCollectionView() {
-        
-        //assert vc nil
-        //call displaycollectionview
-        
-        // test list is not nil
-        // test list however many elt's i specify
     }
     
     
