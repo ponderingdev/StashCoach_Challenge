@@ -11,7 +11,8 @@ import UIKit
 
 
 protocol PresenterToViewProtocol: class {
-    var data: AchievementsResponse?{get set}
+    var list: [AchievementModel]?{get set}
+    var title: String?{get set}
     func displayCollectionView()
     func displayError()
 }

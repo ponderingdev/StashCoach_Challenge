@@ -16,7 +16,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
     var presenter: ViewToPresenterProtocol?
     
 //    var achievements = [AchievementModel]()
-    var data: AchievementsResponse?
+    var overviewTitle: String?
     var list: [AchievementModel]?
     
     override func viewDidLoad() {
@@ -112,8 +112,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
 extension StashCoachCollectionViewController: PresenterToViewProtocol {
     
     func displayCollectionView() {
-        self.title = data!.overview.title
-        self.list = data!.achievements
          collectionView.reloadData()
     }
     

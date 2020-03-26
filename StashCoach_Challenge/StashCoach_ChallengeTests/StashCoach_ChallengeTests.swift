@@ -59,7 +59,7 @@ class StashCoach_ChallengeTests: XCTestCase {
     
     func testAchievementsFetched(){
         presenter.achievementsFetched(nil)
-         XCTAssertNil(presenter.view?.data)
+//        XCTAssertNil(presenter.view)
         
         let model1 = AchievementModel(id: 10, level: "10", progress: 3, total: 100, bg_image_url: "someurl.jpg", accessible: true)
         let model2 = AchievementModel(id: 33, level: "4", progress: 4, total: 4, bg_image_url: "another_url.jpg", accessible: false)
@@ -73,7 +73,7 @@ class StashCoach_ChallengeTests: XCTestCase {
 //        var collectionVC = StashCoachCollectionViewController()
 //        presenter.view = collectionVC
 //        collectionVC.list = presenter.view?.data.
-//        XCTAssertEqual(presenter.view?., <#T##expression2: FloatingPoint##FloatingPoint#>, accuracy: <#T##FloatingPoint#>)
+//        XCTAssertEqual(presenter?.view?.list?.count, 2, accuracy: "Collection list size not correct")
         
 
     }
