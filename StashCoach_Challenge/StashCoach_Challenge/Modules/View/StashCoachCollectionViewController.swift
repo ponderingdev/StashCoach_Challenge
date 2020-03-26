@@ -15,7 +15,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
     var presenter: ViewToPresenterProtocol?
     
-    var achievements = [AchievementModel]()
+//    var achievements = [AchievementModel]()
     var data: AchievementsResponse?
     var list: [AchievementModel]?
     
@@ -34,7 +34,6 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return self.achievements.count
         return list?.count ?? 0
     }
 
@@ -43,17 +42,15 @@ class StashCoachCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
-    
-        cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
+        
+        cell.getImage(list![indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
             })
-            
         
         
-        if  !achievements[indexPath.section].accessible {
+        if  !list![indexPath.section].accessible {
             for view in cell.contentView.subviews{
                 //skip circle view
                 if view.tag == 1{
@@ -72,15 +69,14 @@ class StashCoachCollectionViewController: UICollectionViewController {
         }
         
         
-        cell.numericLevel.text = achievements[indexPath.section].level
+        cell.numericLevel.text = list![indexPath.section].level
         
-        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(achievements[indexPath.section].total))
-        cell.progressView.observedProgress?.completedUnitCount = Int64(achievements[indexPath.section].progress)
-//        cell.progressView.observedProgress?.back
+        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(list![indexPath.section].total))
+        cell.progressView.observedProgress?.completedUnitCount = Int64(list![indexPath.section].progress)
     
                 
-        cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
-        cell.totalLabel.text = String(achievements[indexPath.section].total) + cell.totalLabel.text!
+        cell.progressLabel.text = String(list![indexPath.section].progress) + cell.progressLabel.text!
+        cell.totalLabel.text = String(list![indexPath.section].total) + cell.totalLabel.text!
         
     
         return cell
@@ -116,11 +112,9 @@ class StashCoachCollectionViewController: UICollectionViewController {
 extension StashCoachCollectionViewController: PresenterToViewProtocol {
     
     func displayCollectionView() {
-        collectionView.reloadData()
         self.title = data!.overview.title
-        self.achievements = data!.achievements
         self.list = data!.achievements
-        
+         collectionView.reloadData()
     }
     
     

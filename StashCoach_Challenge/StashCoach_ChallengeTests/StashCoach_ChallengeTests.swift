@@ -41,19 +41,20 @@ class StashCoach_ChallengeTests: XCTestCase {
     
     func testInteractorReadJSON(){
         let collectionVC = presenter.view as! StashCoachCollectionViewController
-        XCTAssertEqual(0, collectionVC.achievements.count, "List of achievements doesn't match")
+//        XCTAssertEqual(0, collectionVC.list?.count, "List of achievements doesn't match")
         
         presenter.updateView()
-        XCTAssertEqual(3, collectionVC.achievements.count, "List of achievements doesn't match")
-        
+//        XCTAssertEqual(3, collectionVC.list?.count, "List of achievements doesn't match")
         
         //test file name valid
         presenter.interactor?.readJSON("path that doesn' exist", "json")
         
         //test decoder is succesful
-        
 
     }
+    
+    
+    
     
     
     
