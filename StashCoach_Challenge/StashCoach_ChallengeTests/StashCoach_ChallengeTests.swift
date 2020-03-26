@@ -72,8 +72,7 @@ class StashCoach_ChallengeTests: XCTestCase {
         
         let dummyPresenter = StashCoachPresenter()
         dummyPresenter.achievementsFetched(dummyresponse)
-        var dummycount = dummyPresenter.response?.achievements.count
-        XCTAssertEqual(dummycount, 2)
+        XCTAssertEqual(dummyPresenter.response?.achievements.count, 2, "Collection count & guess don't match")
 
         
     }
