@@ -19,7 +19,7 @@ class StashCoach_ChallengeTests: XCTestCase {
     
         router = StashCoachRouter()
         presenter = router.presenter
-        router.setUp()
+//        router.setUp()
         
     }
 
@@ -28,16 +28,17 @@ class StashCoach_ChallengeTests: XCTestCase {
     }
     
     func testRouterSetup(){
-        XCTAssertNotNil(router)
         
+        XCTAssertNil(presenter.view)
+        XCTAssertNil(presenter.interactor)
+        
+        router.setUp()
+
         XCTAssertNotNil(presenter.view)
         XCTAssertNotNil(presenter.interactor)
     
     }
-    
-    func testAchievementsFethched(){
-    //        presenter.achievementsFetched(<#T##response: AchievementsResponse##AchievementsResponse#>)
-    }
+
     
     func testInteractorReadJSON(){
         
@@ -51,6 +52,7 @@ class StashCoach_ChallengeTests: XCTestCase {
         XCTAssertNil(presenter.response)
 
         // Goes through normal flow
+        router.setUp()
         presenter.updateView()
         XCTAssertNotNil(presenter.response)
 
