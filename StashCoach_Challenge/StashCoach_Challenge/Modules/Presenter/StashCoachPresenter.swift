@@ -26,13 +26,8 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
         }
     }
     
-    func achievementsFetchFailed() {
-    }
-    
     func updateView() {
         interactor?.readJSON("Achievements", "json")
     }
-    
-    
 
 }

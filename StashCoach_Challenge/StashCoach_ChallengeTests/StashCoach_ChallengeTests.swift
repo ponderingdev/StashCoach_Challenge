@@ -40,28 +40,26 @@ class StashCoach_ChallengeTests: XCTestCase {
     }
     
     func testInteractorReadJSON(){
-        let collectionVC = presenter.view as! StashCoachCollectionViewController
         
-        
-        // Interactor 
+        // Interactor reads from invalid path
         presenter.interactor?.readJSON("invalid file path", "json")
         XCTAssertNil(presenter.view?.data)
         
+        // Interactor decodes invalid structure
         presenter.interactor?.readJSON("Achievements_InvalidCodable", "json")
         XCTAssertNil(presenter.view?.data)
 
-        
+        // Goes through normal flow
         presenter.updateView()
         XCTAssertNotNil(presenter.view?.data)
 
     }
     
-    
-    
-    
-    
-    
-    
+    func testAchievementsFetched(){
+        presenter.achievementsFetched(nil)
+         XCTAssertNil(presenter.view?.data)
+
+    }
     
     
 
