@@ -18,7 +18,7 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
     func achievementsFetched(_ response:AchievementsResponse?) {
         if let data = response {
             view?.data = data
-            view?.displayCollectionView(data.overview.title, data.achievements)
+            view?.displayCollectionView()
 
         }
         else {
