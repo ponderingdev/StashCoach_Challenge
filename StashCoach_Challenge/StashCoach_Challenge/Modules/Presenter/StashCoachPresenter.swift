@@ -6,7 +6,6 @@
 //  Copyright © 2020 Jesus Fabian. All rights reserved.
 //
 
-import UIKit
 
 class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtocol{
     
@@ -18,6 +17,7 @@ class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtoco
    
     func achievementsFetched(_ response:AchievementsResponse?) {
         if let data = response {
+            view?.data = data
             view?.displayCollectionView(data.overview.title, data.achievements)
 
         }
