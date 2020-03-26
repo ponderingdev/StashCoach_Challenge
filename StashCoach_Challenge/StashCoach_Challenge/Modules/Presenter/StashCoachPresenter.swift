@@ -10,16 +10,17 @@
 class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtocol{
     
     var view: PresenterToViewProtocol?
-       
     var interactor: PresenterToInteractorProtocol?
-       
     var router: PresenterToRouterProtocol?
+    
+    var response: AchievementsResponse?
+    
    
-    func achievementsFetched(_ response:AchievementsResponse?) {
-        if let data = response {
+    func achievementsFetched(_ rspnse:AchievementsResponse?) {
+        if let data = rspnse {
+            response = data
             view?.data = data
             view?.displayCollectionView()
-
         }
         else {
             view?.displayError()

@@ -17,6 +17,7 @@ protocol PresenterToViewProtocol: class {
 }
 
 protocol InteractorToPresenterProtocol : class{
+    var response: AchievementsResponse?{get set}
     func achievementsFetched(_ response:AchievementsResponse?)
 //    func achievementsFetchFailed()
 }

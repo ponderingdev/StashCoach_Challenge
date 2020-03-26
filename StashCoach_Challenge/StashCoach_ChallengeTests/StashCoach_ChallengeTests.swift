@@ -45,15 +45,15 @@ class StashCoach_ChallengeTests: XCTestCase {
         
         // Interactor reads from invalid path
         presenter.interactor?.readJSON("invalid file path", "json")
-        XCTAssertNil(presenter.view?.data)
+        XCTAssertNil(presenter.response)
         
         // Interactor decodes invalid structure
         presenter.interactor?.readJSON("Achievements_InvalidCodable", "json")
-        XCTAssertNil(presenter.view?.data)
+        XCTAssertNil(presenter.response)
 
         // Goes through normal flow
         presenter.updateView()
-        XCTAssertNotNil(presenter.view?.data)
+        XCTAssertNotNil(presenter.response)
 
     }
     
