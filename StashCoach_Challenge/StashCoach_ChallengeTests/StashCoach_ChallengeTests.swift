@@ -46,8 +46,14 @@ class StashCoach_ChallengeTests: XCTestCase {
         presenter.updateView()
 //        XCTAssertEqual(3, collectionVC.list?.count, "List of achievements doesn't match")
         
-        //test file name valid
-        presenter.interactor?.readJSON("path that doesn' exist", "json")
+        //test valid json but invalid structure name valid
+        presenter.interactor?.readJSON("invalid file path", "json")
+        
+        //test codable structure
+        
+        
+    
+        //test decoding failed
         
         //test decoder is succesful
 
