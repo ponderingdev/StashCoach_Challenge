@@ -13,9 +13,9 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
+    
     var presenter: ViewToPresenterProtocol?
     
-//    var achievements = [AchievementModel]()
     var overviewTitle: String?
     var list: [AchievementModel]?
     
@@ -54,15 +54,12 @@ class StashCoachCollectionViewController: UICollectionViewController {
             for view in cell.contentView.subviews{
                 //skip circle view
                 if view.tag == 1{
-//                    view.backgroundColor = .white
                     view.alpha = 0.9
                     for label in view.subviews{
                         label.alpha = 0.5
                     }
-//                    print("skipping: \(type(of: view))")
                     continue
                 }
-//                print("applying transparency to:\(type(of: view))")
                 view.alpha = 0.5
             }
             
@@ -75,8 +72,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
         cell.progressView.observedProgress?.completedUnitCount = Int64(list![indexPath.section].progress)
     
                 
-        cell.progressLabel.text = String(list![indexPath.section].progress) + cell.progressLabel.text!
-        cell.totalLabel.text = String(list![indexPath.section].total) + cell.totalLabel.text!
+        cell.progressLabel.text = String(list![indexPath.section].progress) + "pts"
+        cell.totalLabel.text = String(list![indexPath.section].total) + "pts"
         
     
         return cell
@@ -114,8 +111,6 @@ extension StashCoachCollectionViewController: PresenterToViewProtocol {
     func displayCollectionView() {
          collectionView.reloadData()
     }
-    
-    
     
     func displayError() {
         

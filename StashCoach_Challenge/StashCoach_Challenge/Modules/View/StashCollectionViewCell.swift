@@ -38,15 +38,16 @@ class StashCollectionViewCell: UICollectionViewCell {
         progressView.layer.cornerRadius = 5
         progressView.clipsToBounds = true
         
-        
-        
-        
         progressLabel.text = points
         totalLabel.text = points
     }
     
+    // if not used when more cells than screen can show, image will be distorted
     override func prepareForReuse() {
-        imageView.image = nil //clears image away but imageView doesn't fuck up cellsize
+        imageView.image = nil
+        
+//        progressLabel.text = ""
+//        totalLabel.text = ""
     }
     
     

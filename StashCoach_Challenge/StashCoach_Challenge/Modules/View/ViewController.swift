@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         let router = StashCoachRouter()
         router.setUp()
         
-//        let collectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
         self.navigationController?.pushViewController(router.presenter.view as! StashCoachCollectionViewController, animated: true)
     }
     
@@ -28,10 +27,6 @@ class ViewController: UIViewController {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = .white
-
-//        let infoButton = UIButton(type: .infoLight)
-//        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
-//        navigationItem.rightBarButtonItem = infoBarButtonItem
 
     }
 
