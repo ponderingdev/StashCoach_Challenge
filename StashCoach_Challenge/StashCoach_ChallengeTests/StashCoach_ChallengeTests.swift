@@ -41,7 +41,6 @@ class StashCoach_ChallengeTests: XCTestCase {
     
     func testInteractorReadJSON(){
         
-        ///TODO. instead of checking view check the presenter data
         
         // Interactor reads from invalid path
         presenter.interactor?.readJSON("invalid file path", "json")
@@ -62,17 +61,19 @@ class StashCoach_ChallengeTests: XCTestCase {
         XCTAssertNil(presenter.view?.list)
         
         
-        
         let model1 = AchievementModel(id: 10, level: "10", progress: 3, total: 100, bg_image_url: "someurl.jpg", accessible: true)
         let model2 = AchievementModel(id: 33, level: "4", progress: 4, total: 4, bg_image_url: "another_url.jpg", accessible: false)
         var testingList = [AchievementModel]()
         testingList.append(model1)
-        
+        testingList.append(model2)
+
         let dummyOverview = AchievementsResponse.Overview(title: "Dummy overview")
         let dummyresponse = AchievementsResponse(success: true, status: 200, overview: dummyOverview, achievements: testingList)
         
         let dummyPresenter = StashCoachPresenter()
         dummyPresenter.achievementsFetched(dummyresponse)
+        var dummycount = dummyPresenter.response?.achievements.count
+        XCTAssertEqual(dummycount, 2)
 
         
     }
