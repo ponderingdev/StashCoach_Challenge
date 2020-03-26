@@ -17,6 +17,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
     
     var achievements = [AchievementModel]()
     var data: AchievementsResponse?
+    var list: [AchievementModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.achievements.count
+//        return self.achievements.count
+        return list?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -117,6 +119,7 @@ extension StashCoachCollectionViewController: PresenterToViewProtocol {
         collectionView.reloadData()
         self.title = data!.overview.title
         self.achievements = data!.achievements
+        self.list = data!.achievements
         
     }
     
