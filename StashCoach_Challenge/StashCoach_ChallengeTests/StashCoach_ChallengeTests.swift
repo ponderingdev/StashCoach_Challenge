@@ -52,6 +52,8 @@ class StashCoach_ChallengeTests: XCTestCase {
         //test codable structure
         
         
+        
+        
     
         //test decoding failed
         

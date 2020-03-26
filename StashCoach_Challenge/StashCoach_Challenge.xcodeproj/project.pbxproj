@@ -23,7 +23,7 @@
 		EAB8465F2423A26700EEABE7 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8465E2423A26700EEABE7 /* AchievementsResponse.swift */; };
 		EAB8466424242C1800EEABE7 /* Achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = EAB8466324242C1800EEABE7 /* Achievements.json */; };
 		EAB8469D242B944800EEABE7 /* StashCoach_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8469C242B944800EEABE7 /* StashCoach_ChallengeTests.swift */; };
-		EAB846A5242D08F000EEABE7 /* Achievements_CodableFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = EAB846A4242D08F000EEABE7 /* Achievements_CodableFailure.json */; };
+		EAB846A7242D252800EEABE7 /* Achievements_CodableFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = EAB846A6242D252800EEABE7 /* Achievements_CodableFailure.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		EAB8469A242B944800EEABE7 /* StashCoach_ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoach_ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB8469C242B944800EEABE7 /* StashCoach_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoach_ChallengeTests.swift; sourceTree = "<group>"; };
 		EAB8469E242B944800EEABE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAB846A4242D08F000EEABE7 /* Achievements_CodableFailure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Achievements_CodableFailure.json; path = ../../../../../Achievements_CodableFailure.json; sourceTree = "<group>"; };
+		EAB846A6242D252800EEABE7 /* Achievements_CodableFailure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Achievements_CodableFailure.json; path = ../../../../../.Trash/Achievements_CodableFailure.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 		EAB846602423A33000EEABE7 /* Achievements_JSON */ = {
 			isa = PBXGroup;
 			children = (
-				EAB846A4242D08F000EEABE7 /* Achievements_CodableFailure.json */,
+				EAB846A6242D252800EEABE7 /* Achievements_CodableFailure.json */,
 				EAB8466324242C1800EEABE7 /* Achievements.json */,
 			);
 			path = Achievements_JSON;
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA48EDD0242069FB004494BF /* LaunchScreen.storyboard in Resources */,
-				EAB846A5242D08F000EEABE7 /* Achievements_CodableFailure.json in Resources */,
+				EAB846A7242D252800EEABE7 /* Achievements_CodableFailure.json in Resources */,
 				EAB8466424242C1800EEABE7 /* Achievements.json in Resources */,
 				EA48EDCD242069FB004494BF /* Assets.xcassets in Resources */,
 				EA48EDC8242069FA004494BF /* Main.storyboard in Resources */,
