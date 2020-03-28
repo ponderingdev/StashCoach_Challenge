@@ -11,17 +11,20 @@ import UIKit
 
 
 protocol PresenterToViewProtocol: class {
-    func displayCollectionView(_ title:String, _ data:[AchievementModel])
+    var list: [AchievementModel]?{get set}
+    var title: String?{get set}
+    func displayCollectionView()
     func displayError()
 }
 
 protocol InteractorToPresenterProtocol : class{
-    func achievementsFetched(_ response:AchievementsResponse)
-    func achievementsFetchFailed()
+    var response: AchievementsResponse?{get set}
+    func achievementsFetched(_ response:AchievementsResponse?)
+//    func achievementsFetchFailed()
 }
 
 protocol PresenterToInteractorProtocol: class{
-    func readJSON()
+    func readJSON(_ path:String, _ filetype:String)
     var presenter: InteractorToPresenterProtocol?{get set}
 }
 protocol ViewToPresenterProtocol: class {

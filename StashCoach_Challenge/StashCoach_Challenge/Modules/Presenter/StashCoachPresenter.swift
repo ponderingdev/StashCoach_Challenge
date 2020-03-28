@@ -6,27 +6,31 @@
 //  Copyright © 2020 Jesus Fabian. All rights reserved.
 //
 
-import UIKit
 
 class StashCoachPresenter: ViewToPresenterProtocol, InteractorToPresenterProtocol{
     
     var view: PresenterToViewProtocol?
-       
     var interactor: PresenterToInteractorProtocol?
-       
     var router: PresenterToRouterProtocol?
-   
-    func achievementsFetched(_ response:AchievementsResponse) {
-        view?.displayCollectionView(response.overview.title, response.achievements)
-    }
     
-    func achievementsFetchFailed() {
+    var response: AchievementsResponse?
+    
+   
+    func achievementsFetched(_ rspnse:AchievementsResponse?) {
+        if let data = rspnse {
+            response = data
+            
+            view?.list = data.achievements
+            view?.title = data.overview.title
+            view?.displayCollectionView()
+        }
+        else {
+            view?.displayError()
+        }
     }
     
     func updateView() {
-        interactor?.readJSON()
+        interactor?.readJSON("Achievements", "json")
     }
-    
-    
 
 }

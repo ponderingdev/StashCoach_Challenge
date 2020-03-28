@@ -13,15 +13,17 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifer = "StashCell"
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
+    
     var presenter: ViewToPresenterProtocol?
     
-    var achievements = [AchievementModel]()
+    var overviewTitle: String?
+    var list: [AchievementModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         presenter?.updateView()
-        
+    
        let infoButton = UIButton(type: .infoLight)
         infoButton.tintColor = .white
         let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
@@ -32,7 +34,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.achievements.count
+        return list?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,44 +42,38 @@ class StashCoachCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
-    
-        cell.getImage(achievements[indexPath.section].bg_image_url, completion: { imageData in
+        
+        cell.getImage(list![indexPath.section].bg_image_url, completion: { imageData in
                 cell.imageView.image = UIImage(data: imageData)
             })
-            
         
         
-        if  !achievements[indexPath.section].accessible {
+        if  !list![indexPath.section].accessible {
             for view in cell.contentView.subviews{
                 //skip circle view
                 if view.tag == 1{
-//                    view.backgroundColor = .white
                     view.alpha = 0.9
                     for label in view.subviews{
                         label.alpha = 0.5
                     }
-//                    print("skipping: \(type(of: view))")
                     continue
                 }
-//                print("applying transparency to:\(type(of: view))")
                 view.alpha = 0.5
             }
             
         }
         
         
-        cell.numericLevel.text = achievements[indexPath.section].level
+        cell.numericLevel.text = list![indexPath.section].level
         
-        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(achievements[indexPath.section].total))
-        cell.progressView.observedProgress?.completedUnitCount = Int64(achievements[indexPath.section].progress)
-//        cell.progressView.observedProgress?.back
+        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(list![indexPath.section].total))
+        cell.progressView.observedProgress?.completedUnitCount = Int64(list![indexPath.section].progress)
     
                 
-        cell.progressLabel.text = String(achievements[indexPath.section].progress) + cell.progressLabel.text!
-        cell.totalLabel.text = String(achievements[indexPath.section].total) + cell.totalLabel.text!
+        cell.progressLabel.text = String(list![indexPath.section].progress) + "pts"
+        cell.totalLabel.text = String(list![indexPath.section].total) + "pts"
         
     
         return cell
@@ -112,10 +108,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
 extension StashCoachCollectionViewController: PresenterToViewProtocol {
     
-    func displayCollectionView(_ title:String, _ data:[AchievementModel]) {
-        collectionView.reloadData()
-        self.title = title
-        self.achievements = data
+    func displayCollectionView() {
+         collectionView.reloadData()
     }
     
     func displayError() {
