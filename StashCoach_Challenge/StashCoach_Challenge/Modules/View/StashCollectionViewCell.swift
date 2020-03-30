@@ -25,9 +25,10 @@ class StashCollectionViewCell: UICollectionViewCell {
         
         self.imageView.contentMode = UIView.ContentMode.scaleToFill
         
-       circularView.layer.cornerRadius = circularView.frame.size.width/2
-       circularView.clipsToBounds = true
-        circularView.alpha = 0.85
+//       circularView.layer.cornerRadius = circularView.frame.size.width/2
+//       circularView.clipsToBounds = true
+//        circularView.alpha = 0.85
+        
         
         imageView.layer.cornerRadius = 8.0
         imageView.clipsToBounds = true
@@ -42,6 +43,15 @@ class StashCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
         
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        circularView.layer.cornerRadius = circularView.frame.size.width/2
+        circularView.clipsToBounds = true
+        circularView.alpha = 0.85
+       
+    }
+    
     
     
     func getImage(_ url:String, completion: @escaping(Data)->Void){
@@ -58,5 +68,7 @@ class StashCollectionViewCell: UICollectionViewCell {
         task.resume()
     
     }
+    
+    
     
 }

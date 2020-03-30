@@ -63,7 +63,7 @@
                                                 <constraint firstAttribute="width" secondItem="ykW-rS-fG0" secondAttribute="height" multiplier="1:2" placeholder="YES" id="Zyn-Xg-pwx"/>
                                             </constraints>
                                         </imageView>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ZW-da3" userLabel="circularView">
+                                        <view tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ZW-da3" userLabel="circularView">
                                             <rect key="frame" x="60" y="30" width="98.5" height="98.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-Z7-M2x" userLabel="level">

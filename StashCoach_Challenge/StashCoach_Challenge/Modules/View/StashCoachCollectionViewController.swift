@@ -30,6 +30,13 @@ class StashCoachCollectionViewController: UICollectionViewController {
         navigationItem.rightBarButtonItem = infoBarButtonItem
 
     }
+    
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//    }
+    
+
 
     // MARK: UICollectionViewDataSource
 
@@ -76,6 +83,10 @@ class StashCoachCollectionViewController: UICollectionViewController {
         cell.totalLabel.text = String(list![indexPath.section].total) + "pts"
         
     
+        
+//        cell.circularView.layer.cornerRadius = cell.circularView.frame.size.width/2
+//        cell.circularView.clipsToBounds = true
+//        cell.circularView.alpha = 0.85
         return cell
     }
 }
