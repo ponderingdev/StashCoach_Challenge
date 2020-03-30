@@ -100,7 +100,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let cellwidth = view.frame.width - 50.0
         
         if (UIDevice.current.userInterfaceIdiom == .phone){
-            return CGSize(width: cellwidth, height: cellwidth - 115.0)
+            return CGSize(width: cellwidth, height: cellwidth - 125.0)
 
         }
         else {

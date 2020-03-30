@@ -20,6 +20,11 @@ class StashCollectionViewCell: UICollectionViewCell {
     @IBOutlet var progressLabel: UILabel!
     @IBOutlet var totalLabel: UILabel!
     
+    
+    
+    @IBOutlet var spaceFromTopCircleViewToParentView: NSLayoutConstraint!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -49,7 +54,11 @@ class StashCollectionViewCell: UICollectionViewCell {
         circularView.layer.cornerRadius = circularView.frame.size.width/2
         circularView.clipsToBounds = true
         circularView.alpha = 0.85
-       
+        
+        // add bit more space from top of circle to contentview
+        if (UIDevice.current.userInterfaceIdiom == .pad){
+            spaceFromTopCircleViewToParentView.constant = 45
+        }
     }
     
     

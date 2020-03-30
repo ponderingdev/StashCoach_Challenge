@@ -162,6 +162,7 @@
                                     <outlet property="numericLevel" destination="QEh-h2-fQ8" id="Tne-LF-DLf"/>
                                     <outlet property="progressLabel" destination="HKo-Hz-TiS" id="DU6-WH-CSL"/>
                                     <outlet property="progressView" destination="GP1-Fc-cN5" id="gUe-sh-7Ei"/>
+                                    <outlet property="spaceFromTopCircleViewToParentView" destination="70y-YF-XTA" id="t0S-Uh-KTc"/>
                                     <outlet property="totalLabel" destination="Rpf-xV-En0" id="dYh-hv-rfc"/>
                                 </connections>
                             </collectionViewCell>
