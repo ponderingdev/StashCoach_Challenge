@@ -57,8 +57,11 @@ class StashCollectionViewCell: UICollectionViewCell {
         
         // add bit more space from top of circle to contentview
         if (UIDevice.current.userInterfaceIdiom == .pad){
-            spaceFromTopCircleViewToParentView.constant = 45
+            spaceFromTopCircleViewToParentView.constant = 75
         }
+        
+        numericLevel.sizeToFit()
+        
     }
     
     
