@@ -12,7 +12,6 @@ class StashCoachInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
 
     
-    // uses the Entity to
     func readJSON(_ path:String, _ filetype:String) {
     
         guard let mainUrl = Bundle.main.url(forResource: path, withExtension: filetype)
