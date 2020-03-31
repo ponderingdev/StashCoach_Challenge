@@ -62,9 +62,6 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykW-rS-fG0" userLabel="imageView">
                                             <rect key="frame" x="0.0" y="0.0" width="218" height="197"/>
                                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="ykW-rS-fG0" secondAttribute="height" multiplier="1:2" placeholder="YES" id="Zyn-Xg-pwx"/>
-                                            </constraints>
                                         </imageView>
                                         <view tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ZW-da3" userLabel="circularView">
                                             <rect key="frame" x="60" y="30" width="98.5" height="98.5"/>
