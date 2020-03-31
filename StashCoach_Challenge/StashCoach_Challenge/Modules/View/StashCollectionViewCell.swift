@@ -60,7 +60,7 @@ class StashCollectionViewCell: UICollectionViewCell {
             spaceFromTopCircleViewToParentView.constant = 75
         }
         
-        numericLevel.sizeToFit()
+//        numericLevel.sizeToFit()
         
     }
     
