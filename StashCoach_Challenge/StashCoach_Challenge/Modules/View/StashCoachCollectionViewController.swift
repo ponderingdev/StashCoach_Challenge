@@ -52,13 +52,9 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
         
         let imgLoader = ImageLoader()
-        imgLoader.getImage(happyCatURL, success: { [weak cell] image in
+        imgLoader.loadImage(happyCatURL) { (image) in
             DispatchQueue.main.async {
-                cell?.imageView.image = image
-            }
-        }) { badImage in
-            DispatchQueue.main.async {
-                cell.imageView.image = badImage
+                cell.imageView.image = image
             }
         }
         
