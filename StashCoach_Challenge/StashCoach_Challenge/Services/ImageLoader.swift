@@ -16,6 +16,7 @@ class ImageLoader: NSObject {
     
     
     
+    //TODO: make one block, two is not neccary
                    
     func getImage(_ url:URL, success: @escaping(UIImage)->Void, failure: @escaping(UIImage)->Void){
         
@@ -39,6 +40,22 @@ class ImageLoader: NSObject {
         }
         dataTask?.resume()
         
+    }
+    
+    func loadImage(_ url:URL, completion: @escaping(UIImage)->Void){
+        
+        if let image = loadedImages?[url]{
+            completion(image)
+        }
+            
+        dataTask?.cancel()
+        dataTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            guard let data = data, error == nil else {
+                completion(UIImage(named: "stash_challenge_sad_cat")!)
+                return
+            }
+            completion(UIImage(data: data)!)
+        })
     }
     
 
