@@ -15,11 +15,11 @@ class ImageLoader: NSObject {
     var loadedImages: [URL: UIImage]?
     
     
+    
                    
-                   
-    func getImage(_ url:URL, success: @escaping(UIImage)->Void){
+    func getImage(_ url:URL, success: @escaping(UIImage)->Void, failure: @escaping(UIImage)->Void){
         
-//        let imgUrl = URL(string: url)!
+//        let happyCat = URL(string: "https://i.imgur.com/cdkydjg.jpg")
         
         /// first look in the dictionary
         
@@ -29,24 +29,16 @@ class ImageLoader: NSObject {
         
         dataTask?.cancel()
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, error == nil else {
+            guard let _ = data, error == nil else {
+                failure(UIImage(named: "stash_challenge_sad_cat")!)
                 return
             }
             
             
-//            success(data)
+            success(UIImage(named: "happy_cat")!)
         }
         dataTask?.resume()
         
-//        dataTask  = URLSession.shared.dataTask(with: imgUrl) { (data, response, error) in
-//                guard let data = data else { return }
-//            DispatchQueue.main.async {
-//                completion(data
-//                )
-//            }
-//        }
-//        task.resume()
-//
     }
     
 
