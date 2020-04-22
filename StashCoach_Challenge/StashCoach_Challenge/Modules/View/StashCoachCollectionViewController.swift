@@ -34,7 +34,8 @@ class StashCoachCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return list?.count ?? 0
+//        return list?.count ?? 0
+        return 2
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,14 +50,19 @@ class StashCoachCollectionViewController: UICollectionViewController {
 //                cell.imageView.image = UIImage(data: imageData)
 //            })
         
+        
+        /// passing happy cat url
+        
         let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
         
         let imgLoader = ImageLoader()
         imgLoader.loadImage(happyCatURL) { (image) in
-            DispatchQueue.main.async {
+//            DispatchQueue.main.async {
                 cell.imageView.image = image
-            }
+//            }
         }
+        
+        print("inside cellForRow:\(imgLoader.loadedImages.count)") // this prints 0
         
         
         

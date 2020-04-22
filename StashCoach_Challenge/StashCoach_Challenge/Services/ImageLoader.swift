@@ -10,28 +10,33 @@ import UIKit
 
 class ImageLoader: NSObject {
     
-    var dataTask: URLSessionTask?
+      var dataTask: URLSessionTask?
 //    will create simple 'cache' to store url and image
-    var loadedImages: [URL: UIImage]?
-
-
+     var loadedImages = [URL: UIImage]()
+    
     
     func loadImage(_ url:URL, completion: @escaping(UIImage)->Void){
         
-        if let image = loadedImages?[url]{
+        
+        if let image = loadedImages[url]{
             print("This image exists!")
             completion(image)
         }
             
         dataTask?.cancel()
-        dataTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            guard let data = data, error == nil else {
+        dataTask = URLSession.shared.dataTask(with: url, completionHandler: { [weak self] data, response, error in
+            guard let image = UIImage(data: data!), error == nil else {
                 completion(UIImage(named: "stash_challenge_sad_cat")!)
                 return
             }
-//            completion(UIImage(data: data)!)
-            completion(UIImage(named: "stash_challenge_sad_cat")!)
+            DispatchQueue.main.async {
+                self?.loadedImages[url] = image
+                print(self?.loadedImages[url]) /// self is nil hence loaded images is nil
+//                completion((self?.loadedImages[url])!) // this is run time error
+                completion(image) // this works fine
 
+            }
+         
         })
         dataTask?.resume()
     }
