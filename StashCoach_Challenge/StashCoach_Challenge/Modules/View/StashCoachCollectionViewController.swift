@@ -45,9 +45,23 @@ class StashCoachCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! StashCollectionViewCell
         
         
-        cell.getImage(list![indexPath.section].bg_image_url, completion: { imageData in
-                cell.imageView.image = UIImage(data: imageData)
-            })
+//        cell.getImage(list![indexPath.section].bg_image_url, completion: { imageData in
+//                cell.imageView.image = UIImage(data: imageData)
+//            })
+        
+        let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
+        
+        let imgLoader = ImageLoader()
+        imgLoader.getImage(happyCatURL, success: { [weak cell] image in
+            DispatchQueue.main.async {
+                cell?.imageView.image = image
+            }
+        }) { badImage in
+            DispatchQueue.main.async {
+                cell.imageView.image = badImage
+            }
+        }
+        
         
         
         if  !list![indexPath.section].accessible {
