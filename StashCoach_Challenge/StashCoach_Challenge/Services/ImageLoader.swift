@@ -10,14 +10,21 @@ import UIKit
 
 class ImageLoader: NSObject {
     
-      var dataTask: URLSessionTask?
+      var dataTask: URLSessionDataTask?
 //    will create simple 'cache' to store url and image
-     var loadedImages = [URL: UIImage]()
+    var loadedImages = [URL: UIImage]()
+    
+    
+    func betterImagedLoaed() {
+        /// 1. make network call ad get back image
+        /// 2. add to dictioanary if possible
+        /// 3. jump on main thread
+    }
     
     
     func loadImage(_ url:URL, completion: @escaping(UIImage)->Void){
         
-        
+        print("before dataTaskWith url called:\(self.loadedImages)")
         if let image = loadedImages[url]{
             print("This image exists!")
             completion(image)
@@ -29,13 +36,14 @@ class ImageLoader: NSObject {
                 completion(UIImage(named: "stash_challenge_sad_cat")!)
                 return
             }
-            DispatchQueue.main.async {
+//            DispatchQueue.main.async {
+                
                 self?.loadedImages[url] = image
+                print("I just added to the dict:\(self?.loadedImages.count)")
                 print(self?.loadedImages[url]) /// self is nil hence loaded images is nil
-//                completion((self?.loadedImages[url])!) // this is run time error
                 completion(image) // this works fine
+//            }
 
-            }
          
         })
         dataTask?.resume()
