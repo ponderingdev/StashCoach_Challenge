@@ -49,18 +49,20 @@ class StashCoachCollectionViewController: UICollectionViewController {
 //        cell.getImage(list![indexPath.section].bg_image_url, completion: { imageData in
 //                cell.imageView.image = UIImage(data: imageData)
 //            })
-        
-        
+    
         /// passing happy cat url
         
         let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
         
         let imgLoader = ImageLoader()
-        imgLoader.loadImage(happyCatURL) { (image) in
-//            DispatchQueue.main.async {
+        
+        
+        
+        imgLoader.smarterImageLoader(happyCatURL) { (image) in
                 cell.imageView.image = image
-//            }
+            print(imgLoader.loadedImages.count)
         }
+        
         
         print("inside cellForRow:\(imgLoader.loadedImages.count)") // this prints 0
         
