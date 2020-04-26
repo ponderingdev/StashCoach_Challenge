@@ -13,6 +13,7 @@ class ImageLoader: NSObject {
       var dataTask: URLSessionDataTask?
 //    will create simple 'cache' to store url and image
     var loadedImages = [URL: UIImage]()
+    var urls = [URL]()
     
     
     func smarterImageLoader(_ url:URL, completion: @escaping(UIImage)->Void) {
@@ -27,10 +28,16 @@ class ImageLoader: NSObject {
             }
 //            completion(image)
         }
-        print("Will make network call\(self.loadedImages)")
-        loadImage(url) { image in
-            self.loadedImages[url]  = image
-            completion(image)
+        
+        if urls.contains(url){
+            // do nothing
+        } else{
+            print("Will make network call and store to avoid")
+            urls.append(url)
+            loadImage(url) { image in
+                self.loadedImages[url]  = image
+                completion(image)
+            }
         }
 
         
@@ -39,20 +46,14 @@ class ImageLoader: NSObject {
     
     func loadImage(_ url:URL, completion: @escaping(UIImage)->Void){
         
-        dataTask?.cancel()
-        dataTask = URLSession.shared.dataTask(with: url, completionHandler: { [weak self] data, response, error in
+//        dataTask?.cancel()
+        dataTask = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             guard let image = UIImage(data: data!), error == nil else {
                 completion(UIImage(named: "stash_challenge_sad_cat")!)
                 return
             }
-            DispatchQueue.main.async {
-                completion(image)
-            }
-//                self?.loadedImages[url] = image
-//                print("I just added to the dict:\(self?.loadedImages.count)")
-//                print(self?.loadedImages[url]) /// self is nil hence loaded images is nil
-//                completion(image) // this works fine
-         
+            completion(image)
+
         })
         dataTask?.resume()
     }

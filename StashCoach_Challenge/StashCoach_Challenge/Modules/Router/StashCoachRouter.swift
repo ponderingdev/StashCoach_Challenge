@@ -20,6 +20,8 @@ class StashCoachRouter: PresenterToRouterProtocol {
     func setUp() {
 
         let collectionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StashViewController") as StashCoachCollectionViewController
+        collectionView.imgLoader = ImageLoader()
+        
 
         let interactor: PresenterToInteractorProtocol = StashCoachInteractor()
         let router: PresenterToRouterProtocol = StashCoachRouter()

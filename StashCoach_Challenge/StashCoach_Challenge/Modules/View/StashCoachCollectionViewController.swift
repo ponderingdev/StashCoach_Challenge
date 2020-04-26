@@ -10,6 +10,8 @@ import UIKit
 
 
 class StashCoachCollectionViewController: UICollectionViewController {
+    
+    var imgLoader: ImageLoader?
 
     private let reuseIdentifer = "StashCell"
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
@@ -54,19 +56,14 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
         
-        let imgLoader = ImageLoader()
-        
-        
-        
-        imgLoader.smarterImageLoader(happyCatURL) { (image) in
+
+//
+        imgLoader?.smarterImageLoader(happyCatURL) { (image) in
+            DispatchQueue.main.async {
                 cell.imageView.image = image
-            print(imgLoader.loadedImages.count)
+            }
         }
-        
-        
-        print("inside cellForRow:\(imgLoader.loadedImages.count)") // this prints 0
-        
-        
+
         
         if  !list![indexPath.section].accessible {
             for view in cell.contentView.subviews{

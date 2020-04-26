@@ -13,6 +13,7 @@ import UIKit
 protocol PresenterToViewProtocol: class {
     var list: [AchievementModel]?{get set}
     var title: String?{get set}
+    var imgLoader:ImageLoader?{get set}
     func displayCollectionView()
     func displayError()
 }
