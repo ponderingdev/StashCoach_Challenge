@@ -43,7 +43,7 @@ class StashCoachCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 //        return list?.count ?? 0
-        return 3
+        return 8
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,48 +66,50 @@ class StashCoachCollectionViewController: UICollectionViewController {
             print("using from dict")
             cell.imageView.image = image
         }
-
-//
-        imgLoader?.loadImage(happyCatURL) { [weak self] url, image  in
-            if let url = url {
-                self?.loadedImages[url] = image
-            }
-            
-            
-            DispatchQueue.main.async {
-                cell.imageView.image = image
-            }
-            
-            print("inside block:\(self?.loadedImages.count)")
-        }
-
-        print("outside block:\(self.loadedImages.count)")
-
         
-        if  !list![indexPath.section].accessible {
-            for view in cell.contentView.subviews{
-                //skip circle view
-                if view.tag == 1{
-                    view.alpha = 0.9
-                    for label in view.subviews{
-                        label.alpha = 0.5
-                    }
-                    continue
+        else {
+            //
+            imgLoader?.loadImage(happyCatURL) { [weak self] url, image  in
+                if let url = url {
+                    self?.loadedImages[url] = image
                 }
-                view.alpha = 0.5
+                
+                
+                DispatchQueue.main.async {
+                    cell.imageView.image = image
+                }
+                
+                print("inside block:\(self?.loadedImages.count)")
             }
-            
+
+            print("outside block:\(self.loadedImages.count)")
         }
+
+        
+//        if  !list![indexPath.section].accessible {
+//            for view in cell.contentView.subviews{
+//                //skip circle view
+//                if view.tag == 1{
+//                    view.alpha = 0.9
+//                    for label in view.subviews{
+//                        label.alpha = 0.5
+//                    }
+//                    continue
+//                }
+//                view.alpha = 0.5
+//            }
+//
+//        }
         
         
-        cell.numericLevel.text = list![indexPath.section].level
+//        cell.numericLevel.text = list![indexPath.section].level
         
-        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(list![indexPath.section].total))
-        cell.progressView.observedProgress?.completedUnitCount = Int64(list![indexPath.section].progress)
+//        cell.progressView.observedProgress = Progress(totalUnitCount: Int64(list![indexPath.section].total))
+//        cell.progressView.observedProgress?.completedUnitCount = Int64(list![indexPath.section].progress)
     
                 
-        cell.progressLabel.text = String(list![indexPath.section].progress) + "pts"
-        cell.totalLabel.text = String(list![indexPath.section].total) + "pts"
+//        cell.progressLabel.text = String(list![indexPath.section].progress) + "pts"
+//        cell.totalLabel.text = String(list![indexPath.section].total) + "pts"
         
 
         return cell
