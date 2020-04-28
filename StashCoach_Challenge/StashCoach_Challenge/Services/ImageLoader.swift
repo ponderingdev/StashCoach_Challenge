@@ -20,42 +20,45 @@ class ImageLoader: NSObject {
         /// 1. make network call ad get back image
         /// 2. add to dictioanary if possible
         /// 3. jump on main thread
-        
-        if let image = loadedImages[url]{
-            print("This image exists!")
-            DispatchQueue.main.async {
-                completion(image)
-            }
-//            completion(image)
-        }
-        
-        if urls.contains(url){
-            // do nothing
-        } else{
-            print("Will make network call and store to avoid")
-            urls.append(url)
-            loadImage(url) { image in
-                self.loadedImages[url]  = image
-                completion(image)
-            }
-        }
+//
+//        if let image = loadedImages[url]{
+//            print("This image exists!")
+//            DispatchQueue.main.async {
+//                completion(image)
+//            }
+////            completion(image)
+//        }
+//
+//        if urls.contains(url){
+//            // do nothing
+//        } else{
+//            print("Will make network call and store to avoid")
+//            urls.append(url)
+//            loadImage(url) { image in
+//                self.loadedImages[url]  = image
+//                completion(image)
+//            }
+//        }
 
         
     }
     
     
-    func loadImage(_ url:URL, completion: @escaping(UIImage)->Void){
+    func loadImage(_ url:URL, completion: @escaping(URL?, UIImage)->Void){
         
 //        dataTask?.cancel()
         dataTask = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             guard let image = UIImage(data: data!), error == nil else {
-                completion(UIImage(named: "stash_challenge_sad_cat")!)
+                completion(url, UIImage(named: "stash_challenge_sad_cat")!)
                 return
             }
-            completion(image)
-
+            completion(url, image)
         })
         dataTask?.resume()
+    }
+    
+    deinit {
+        print("losing image laoder")
     }
     
 

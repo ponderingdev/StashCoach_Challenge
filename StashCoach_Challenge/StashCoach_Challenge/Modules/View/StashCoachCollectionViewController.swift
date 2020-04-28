@@ -12,7 +12,8 @@ import UIKit
 class StashCoachCollectionViewController: UICollectionViewController {
     
     var imgLoader: ImageLoader?
-
+    
+    var loadedImages = [URL:UIImage]()
     private let reuseIdentifer = "StashCell"
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 8.0, right: 5.0)
     
@@ -20,6 +21,11 @@ class StashCoachCollectionViewController: UICollectionViewController {
     
     var overviewTitle: String?
     var list: [AchievementModel]?
+    
+//    init() {
+//
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +62,26 @@ class StashCoachCollectionViewController: UICollectionViewController {
         
         let happyCatURL = URL(string: "https://i.imgur.com/cdkydjg.jpg")!
         
+        if let image = loadedImages[happyCatURL] {
+            print("using from dict")
+            cell.imageView.image = image
+        }
 
 //
-        imgLoader?.smarterImageLoader(happyCatURL) { (image) in
+        imgLoader?.loadImage(happyCatURL) { [weak self] url, image  in
+            if let url = url {
+                self?.loadedImages[url] = image
+            }
+            
+            
             DispatchQueue.main.async {
                 cell.imageView.image = image
             }
+            
+            print("inside block:\(self?.loadedImages.count)")
         }
+
+        print("outside block:\(self.loadedImages.count)")
 
         
         if  !list![indexPath.section].accessible {
